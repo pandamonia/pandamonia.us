@@ -1,30 +1,30 @@
 /* @group Default */
 
 body { 
-    -moz-font-feature-settings:"liga=1, dlig=1"; 
-    -moz-font-feature-settings:"liga", "dlig"; /* EDIT: new syntax for FF 15+ */ 
-    -ms-font-feature-settings:"liga", "dlig"; 
-    -o-font-feature-settings:"liga", "dlig"; 
-    -webkit-font-feature-settings:"liga", "dlig"; 
-    font-feature-settings:"liga", "dlig";
+  -moz-font-feature-settings:"liga=1, dlig=1"; 
+  -moz-font-feature-settings:"liga", "dlig"; /* EDIT: new syntax for FF 15+ */ 
+  -ms-font-feature-settings:"liga", "dlig"; 
+  -o-font-feature-settings:"liga", "dlig"; 
+  -webkit-font-feature-settings:"liga", "dlig"; 
+  font-feature-settings:"liga", "dlig";
+  text-rendering:optimizeLegibility;
 }
 
 h1 {
-	font-family:Lobster,cursive;
+	font-family:Lobster, cursive;
 	text-transform:lowercase;
-	text-rendering:optimizeLegibility;
 }
 
-li.social {
-	-webkit-border-radius:82px;
-	-moz-border-radius:82px;
-	background-color:#a1b980;
-	border-radius:82px;
-	text-align:center;
+li.social a {
+  -webkit-border-radius:82px;
+  -moz-border-radius:82px;
+  background-color:#a1b980;
+  border-radius:82px;
+  text-align:center;
 }
 
-li.social:hover {
-	background-color:#839a62;
+li.social a:hover {
+  background-color:#839a62;
 }
 
 /* @end */
