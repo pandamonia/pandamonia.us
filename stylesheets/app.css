@@ -16,21 +16,17 @@ h1 {
 }
 
 .social {
-  text-align:center;
-}
-
-.social a {
   -webkit-border-radius:40px;
   -moz-border-radius:40px;
   background-color:#a1b980;
   border-radius:40px;
   height:80px;
   margin:0 auto;
+  text-align:center;
   width:80px;
 }
 
-.social a:hover {
-  background-color:#839a62;
+.social:hover {
 }
 
 /* @end */
