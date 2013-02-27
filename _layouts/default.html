@@ -23,17 +23,22 @@
   <script src="javascripts/modernizr.foundation.js"></script>
 </head>
 <body>
-  <nav class="top-bar">
-    <ul>
-      <li class="name"><h1><a href="/">Pandamonia</a></h1></li>
-      <li class="toggle-topbar"><a href="#"></a></li>
-    </ul>
-    <section>
-      <ul class="left">
-        {% assign pages_list = site.pages %}{% assign group = 'navigation' %}{% include pages_list %}
+  <div class="row">
+    <div class="twelve columns">
+
+    <nav class="top-bar">
+      <ul class="top-bar">
+        <li class="name"><h1><a href="/">Pandamonia</a></h1></li>
+        <li class="toggle-topbar"><a href="#"></a></li>
       </ul>
-    </section>
-  </nav>
+
+      <section>
+        <ul class="right">
+          {% assign pages_list = site.pages %}{% assign group = 'navigation' %}{% include pages_list %}
+        </ul>
+      </section>
+    </nav>
+  </div>
 
   {{ content }}  
   
