@@ -20,6 +20,7 @@ h1 {
   -moz-border-radius: 40px;
   background: no-repeat center center #a1b980;
   border-radius: 40px;
+  display: block;
   height: 80px;
   margin: 0 auto;
   text-align: center;
