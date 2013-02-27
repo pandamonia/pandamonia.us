@@ -3,6 +3,7 @@
 h1 {
 	font-family: Lobster, cursive;
 	text-transform: lowercase;
+	text-rendering: optimizeLegibility;
 }
 
 li.social {
