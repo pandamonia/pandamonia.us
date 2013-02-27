@@ -15,12 +15,18 @@ h1 {
 	text-transform:lowercase;
 }
 
+li.social {
+  text-align:center;
+}
+
 li.social a {
   -webkit-border-radius:82px;
   -moz-border-radius:82px;
   background-color:#a1b980;
   border-radius:82px;
-  text-align:center;
+  height:164px;
+  margin:0 auto;
+  width:164px;
 }
 
 li.social a:hover {
