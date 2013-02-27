@@ -32,19 +32,19 @@ h1 {
 }
 
 .social.appdotnet {
-  background-image: url("../images/social/appdotnet.png");
+  background: url("../images/social/appdotnet.png") no-repeat center;
 }
 
 .social.email {
-  background-image: url("../images/social/email.png");
+  background: url("../images/social/email.png") no-repeat center;
 }
 
 .social.facebook {
-  background-image: url("../images/social/facebook.png");
+  background: url("../images/social/facebook.png") no-repeat center;
 }
 
 .social.twitter {
-  background-image: url("../images/social/twitter.png");
+  background: url("../images/social/twitter.png") no-repeat center;
 }
 
 /* @end */
