@@ -20,13 +20,13 @@ li.social {
 }
 
 li.social a {
-  -webkit-border-radius:82px;
-  -moz-border-radius:82px;
+  -webkit-border-radius:40px;
+  -moz-border-radius:40px;
   background-color:#a1b980;
-  border-radius:82px;
-  height:164px;
+  border-radius:40px;
+  height:80px;
   margin:0 auto;
-  width:164px;
+  width:80px;
 }
 
 li.social a:hover {
