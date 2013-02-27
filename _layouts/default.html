@@ -11,12 +11,8 @@
 
   <title>{{ page.title }} &bull; Pandamonia</title>
   
-  <!-- Included CSS Files (Uncompressed) -->
-  <!--
-  <link rel="stylesheet" href="stylesheets/foundation.css">
-  -->
-  
   <!-- Included CSS Files (Compressed) -->
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="stylesheets/foundation.min.css">
   <link rel="stylesheet" href="stylesheets/app.css">
 
@@ -25,33 +21,31 @@
 <body>
   <div class="row">
     <div class="twelve columns">
-      <nav class="top-bar">
-        <ul class="top-bar">
-          <li class="name"><h1><a href="/">Pandamonia</a></h1></li>
-          <li class="toggle-topbar"><a href="#"></a></li>
+      <ul class="top-bar">
+        <li class="name"><h1><a href="/">Pandamonia</a></h1></li>
+        <li class="toggle-topbar"><a href="#"></a></li>
+      </ul>
+  
+      <section>
+        <ul class="right">
+          {% assign pages_list = site.pages %}{% assign group = 'navigation' %}{% include pages_list %}
         </ul>
-
-        <section>
-          <ul class="right">
-            {% assign pages_list = site.pages %}{% assign group = 'navigation' %}{% include pages_list %}
-          </ul>
-        </section>
-      </nav>
+      </section>
     </div>
   </div>
 
-  {{ content }}  
+  {{ content }}
   
   <div class="row">
     <div class="twelve columns">
-      <h2>Say Hello</h2>
+      <h3>Say Hello</h3>
       <p>We&rsquo;d love to hear from you and answer any questions you may have. Send us an
 email, follow us on Twitter or App.net, or like us on Facebook.</p>
       <ul class="block-grid four-up">
-        <li><a href="https://twitter.com/pandamonia">Twitter</a></li>
-        <li><a href="https://alpha.app.net/pandamonia">App.net</a></li>
-        <li><a href="contact.html">Email</a></li>
-        <li><a href="https://www.facebook.com/pandamonia.llc">Facebook</a></li>
+        <li class="social"><a href="https://twitter.com/pandamonia" class="twitter">Twitter</a></li>
+        <li class="social"><a href="https://alpha.app.net/pandamonia" class="appdotnet">App.net</a></li>
+        <li class="social"><a href="contact.html" class=="email">Email</a></li>
+        <li class="social"><a href="https://www.facebook.com/pandamonia.llc" class="facebook">Facebook</a></li>
       </ul>
       <div class="row">
         <div class="twelve columns">
@@ -61,22 +55,11 @@ email, follow us on Twitter or App.net, or like us on Facebook.</p>
     </div>
   </div>
 
-  <!-- Included JS Files (Uncompressed) -->
-  <!--
-  <script src="javascripts/jquery.js"></script><script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script><script src="javascripts/jquery.foundation.forms.js"></script><script src="javascripts/jquery.foundation.reveal.js"></script><script src="javascripts/jquery.foundation.orbit.js"></script><script src="javascripts/jquery.foundation.navigation.js"></script><script src="javascripts/jquery.foundation.buttons.js"></script><script src="javascripts/jquery.foundation.tabs.js"></script><script src="javascripts/jquery.foundation.tooltips.js"></script><script src="javascripts/jquery.foundation.accordion.js"></script><script src="javascripts/jquery.placeholder.js"></script><script src="javascripts/jquery.foundation.alerts.js"></script><script src="javascripts/jquery.foundation.topbar.js"></script><script src="javascripts/jquery.foundation.joyride.js"></script><script src="javascripts/jquery.foundation.clearing.js"></script><script src="javascripts/jquery.foundation.magellan.js"></script>
-  -->
-  
   <!-- Included JS Files (Compressed) -->
   <script src="javascripts/jquery.js"></script>
   <script src="javascripts/foundation.min.js"></script>
   
   <!-- Initialize JS Plugins -->
   <script src="javascripts/app.js"></script>
-
-  <script>
-    $(window).load(function(){
-      $("#featured").orbit();
-    });
-  </script> 
 </body>
 </html>

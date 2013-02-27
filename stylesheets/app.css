@@ -1,29 +1,20 @@
-/* Artfully masterminded by ZURB  */
+/* @group Default */
 
-/* -------------------------------------------------- 
-   Table of Contents
------------------------------------------------------
-:: Shared Styles
-:: Page Name 1
-:: Page Name 2
-*/
+h1 {
+	font-family: Lobster, cursive;
+	text-transform: lowercase;
+}
 
+li.social {
+	-webkit-border-radius: 82px;
+	-moz-border-radius: 82px;
+	background-color: #a1b980;
+	border-radius: 82px;
+	text-align: center;
+}
 
-/* -----------------------------------------
-   Shared Styles
------------------------------------------ */
+li.social:hover {
+	background-color: #839a62;
+}
 
-
-
-/* -----------------------------------------
-   Page Name 1
------------------------------------------ */
-
-
-
-
-/* -----------------------------------------
-   Page Name 2
------------------------------------------ */
-
-
+/* @end */
