@@ -1,4 +1,4 @@
-@import "settings";
+// @import "settings";
 @import "foundation";
 @import "retina";
 
@@ -30,26 +30,26 @@ h1 {
 	text-align: center;
 	text-indent: -9999em;
 	width: 80px;
-}
 
-.social:hover {
-	background-color: #839a62;
-}
+	&:hover {
+		background-color: #839a62;
+	}
 
-.social.appdotnet {
-	@include at2x('../images/social/appdotnet', 35px, 32px, '.png');
-}
+	&.appdotnet {
+		@include at2x('../images/social/appdotnet', 35px, 32px, '.png');
+	}
 
-.social.email {
-	@include at2x('../images/social/email', 35px, 35px, '.png');
-}
+	&.email {
+		@include at2x('../images/social/email', 35px, 35px, '.png');
+	}
 
-.social.facebook {
-	@include at2x('../images/social/facebook', 17px, 35px, '.png');
-}
+	&.facebook {
+		@include at2x('../images/social/facebook', 17px, 35px, '.png');
+	}
 
-.social.twitter {
-	@include at2x('../images/social/twitter', 43px, 35px, '.png');
+	&.twitter {
+		@include at2x('../images/social/twitter', 43px, 35px, '.png');
+	}
 }
 
 /* @end */
