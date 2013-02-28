@@ -5,4 +5,4 @@ assets:
   compress:
     js:   uglifier
     css:  sass
-  cachebust: hard
+# cachebust: hard
