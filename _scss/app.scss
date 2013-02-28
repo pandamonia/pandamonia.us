@@ -14,12 +14,15 @@ body {
 
 h1 {
 	font-family: Lobster, cursive;
-	text-transform: lowercase;
 }
 
-nav .divider {
-	@media #{$topbar-media-query} {
-		display: none;
+nav {
+	text-transform: lowercase;
+	
+	.divider {
+		@media #{$topbar-media-query} {
+			display: none;
+		}
 	}
 }
 
