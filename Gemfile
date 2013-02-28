@@ -1,8 +1,0 @@
-gem "closure-compiler"
-gem "foreman"
-gem "haml"
-gem "jekyll"
-gem "jekyll-asset-pipeline"
-gem "rb-inotify"
-gem "rdiscount"
-gem "zurb-foundation"
