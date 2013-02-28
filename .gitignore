@@ -12,5 +12,8 @@ Icon
 .Spotlight-V100
 .Trashes
 
-### SASS Ignores - "Sassy CSS" http://sass-lang.com/
+### SASS
 *.sass-cache
+
+### Jekyll
+_site/
