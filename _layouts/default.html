@@ -5,18 +5,13 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
-
-  <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
   <title>{{ page.title }} &bull; Pandamonia</title>
   
-  <!-- Included CSS Files (Compressed) -->
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="stylesheets/app.css">
-
-  <script src="javascripts/modernizr.foundation.js"></script>
+  {% stylesheet app }
+  {% javascript app %}
 </head>
 <body>
   <div class="row">
@@ -43,7 +38,7 @@
       <h3>Say Hello</h3>
       <p>We&rsquo;d love to hear from you and answer any questions you may have. Send us an
 email, follow us on Twitter or App.net, or like us on Facebook.</p>
-      <ul class="block-grid four-up">
+      <ul class="row block-grid four-up">
         <li>
           <a href="https://twitter.com/pandamonia" target="_blank" class="social twitter">Twitter</a>
         </li>
@@ -64,13 +59,5 @@ email, follow us on Twitter or App.net, or like us on Facebook.</p>
       </div>
     </div>
   </div>
-
-  <!-- Included JS Files (Compressed) -->
-  <script src="javascripts/jquery.js"></script>
-  <script src="javascripts/foundation.min.js"></script>
-  
-  <!-- Initialize JS Plugins -->
-  <script src="javascripts/retina.js"></script>
-  <script src="javascripts/app.js"></script>
 </body>
 </html>

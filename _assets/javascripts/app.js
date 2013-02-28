@@ -1,3 +1,7 @@
+//= require jquery
+//= require retina
+//= require modernizr.foundation
+
 ;(function ($, window, undefined) {
   'use strict';
 
