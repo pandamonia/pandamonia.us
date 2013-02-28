@@ -6,9 +6,9 @@ assets:
   baseurl: /assets/
   sources:
     - _assets/javascripts
-    - _assets/sass
+    - _assets/stylesheets
     - _assets/images
   compress:
-    js:   ~
+#   js:   ~
     css:  sass
   cachebust: hard
