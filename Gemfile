@@ -1,3 +1,4 @@
+gem "closure-compiler"
 gem "foreman"
 gem "haml"
 gem "jekyll"
