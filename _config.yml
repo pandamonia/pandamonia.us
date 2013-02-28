@@ -9,6 +9,6 @@ assets:
     - _assets/stylesheets
     - _assets/images
   compress:
-#   js:   ~
+    js:   uglifier
     css:  sass
   cachebust: hard
