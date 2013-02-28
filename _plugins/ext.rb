@@ -1,7 +1,7 @@
 require 'sprockets'
 
 foundation_root = Gem::Specification.find_by_name("zurb-foundation").gem_dir
-Sprockets.append_path File.join(neat_root, "scss")
+Sprockets.append_path File.join(foundation_root, "scss")
 
 modular_scale_root = Gem::Specification.find_by_name("modular-scale").gem_dir
 Sprockets.append_path File.join(modular_scale_root, "stylesheets")
