@@ -2,8 +2,6 @@ auto: true
 url: http://pandamonia.us
 permalink: /
 assets:
-  dirname: assets
-  baseurl: /assets/
   sources:
     - _assets/javascripts
     - _assets/stylesheets
@@ -11,4 +9,4 @@ assets:
   compress:
     js:   uglifier
     css:  sass
-  cachebust: hard
+# cachebust: hard
