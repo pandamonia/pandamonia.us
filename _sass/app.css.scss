@@ -2,8 +2,6 @@
 @import "foundation";
 @import "retina";
 
-/* @group Default */
-
 body { 
 	-moz-font-feature-settings: "liga=1, dlig=1"; 
 	-moz-font-feature-settings: "liga", "dlig"; /* EDIT: new syntax for FF 15+ */ 
@@ -52,4 +50,11 @@ h1 {
 	}
 }
 
-/* @end */
+footer {
+	background-color: #c4d295;
+	text-align: center;
+}
+
+footer .copyright {
+	background-color: #849b64;
+}
