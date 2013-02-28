@@ -3,6 +3,5 @@ url: http://pandamonia.us
 permalink: /
 assets:
   compress:
-    js:   uglifier
-    css:  sass
-  cachebust: hard
+    css: sass
+    js:  uglifier
