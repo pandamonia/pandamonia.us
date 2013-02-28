@@ -1,5 +1,15 @@
+require 'sprockets'
+
+foundation_root = Gem::Specification.find_by_name("zurb-foundation").gem_dir
+Sprockets.append_path File.join(neat_root, "scss")
+
+modular_scale_root = Gem::Specification.find_by_name("modular-scale").gem_dir
+Sprockets.append_path File.join(modular_scale_root, "stylesheets")
+
 require 'sass'
 require 'uglifier'
+
+require 'jekyll-assets/compass'
 require 'jekyll-assets'
 
 # https://github.com/ixti/jekyll-assets/issues/16#issuecomment-13908709
