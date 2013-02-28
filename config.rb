@@ -3,7 +3,7 @@ require 'zurb-foundation'
 
 
 # Set this to the root of your project when deployed:
-http_path = "/"
+http_path = "http://pandamonia.us/"
 css_dir = "stylesheets"
 sass_dir = "sass"
 images_dir = "images"

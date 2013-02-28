@@ -19,7 +19,7 @@ assets:
   #     js   => 'yui', 'uglifier', nil
   #
   compress:
-    js:   
+  # js:   
     css:  sass
   #
   # Sets cachebusting policy for generated assets.
