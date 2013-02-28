@@ -1,7 +1,4 @@
-# require 'sassy-math'
-# require 'modular-scale'
 require 'zurb-foundation'
-
 require 'sass'
 require 'uglifier'
 
