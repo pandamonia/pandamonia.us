@@ -1,8 +1,6 @@
-// Your custom settings file to override Foundation defaults
 @import "settings";
-
-// Comment out this import if you are customizing you imports below
 @import "foundation";
+@import "retina"
 
 /* @group Default */
 
@@ -39,41 +37,19 @@ h1 {
 }
 
 .social.appdotnet {
-	background-image: url("../images/social/appdotnet.png");
+	@include at2x('../images/social/appdotnet', 35px, 32px, '.png');
 }
 
 .social.email {
-	background-image: url("../images/social/email.png");
+	@include at2x('../images/social/email', 35px, 35px, '.png');
 }
 
 .social.facebook {
-	background-image: url("../images/social/facebook.png");
+	@include at2x('../images/social/facebook', 17px, 35px, '.png');
 }
 
 .social.twitter {
-	background-image: url("../images/social/twitter.png");
-}
-
-@media all and (-webkit-min-device-pixel-ratio: 1.5) {
-	.social.appdotnet {
-		background-image: url("../images/social/appdotnet@2x.png");
-		background-size: 35px 32px;
-	}
-	
-	.social.email {
-		background-image: url("../images/social/email@2x.png");
-		background-size: 35px 35px;
-	}
-	
-	.social.facebook {
-		background-image: url("../images/social/facebook@2x.png");
-		background-size: 17px 32px;
-	}
-	
-	.social.twitter {
-		background-image: url("../images/social/twitter@2x.png");
-		background-size: 43px 35px;
-	}
+	@include at2x('../images/social/twitter', 43px, 35px, '.png');
 }
 
 /* @end */
