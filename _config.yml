@@ -1,26 +1,13 @@
 auto: true
 url: http://pandamonia.us
 permalink: /
-
-#
-# Plugin: jekyll-assets
-#
 assets:
-  #
-  # Pathname of the destination of generated (bundled) assets relative
-  # to the destination of the root.
-  #
   dirname: assets
-  #
-  # Base URL of assets paths.
-  #
   baseurl: /assets/
-  #
-  # Pathnames where to find assets relative to the root of the site.
-  #
   sources:
     - _assets/javascripts
-    - _assets/stylesheets
+  # - _assets/stylesheets
+    - _assets/sass
     - _assets/images
   #
   # Sets compressors for the specific types of file: `js`, or `css`.
@@ -32,8 +19,8 @@ assets:
   #     js   => 'yui', 'uglifier', nil
   #
   compress:
-    js:   sass
-    css:  nil
+    js:   nil
+    css:  sass
   #
   # Sets cachebusting policy for generated assets.
   #

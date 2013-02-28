@@ -1,7 +1,3 @@
-//= require jquery
-//= require retina
-//= require modernizr.foundation
-
 ;(function ($, window, undefined) {
   'use strict';
 
@@ -34,7 +30,10 @@
   if (Modernizr.touch && !window.location.hash) {
     $(window).load(function () {
       setTimeout(function () {
-        window.scrollTo(0, 1);
+        // At load, if user hasn't scrolled more than 20px or so...
+  			if( $(window).scrollTop() < 20 ) {
+          window.scrollTo(0, 1);
+        }
       }, 0);
     });
   }

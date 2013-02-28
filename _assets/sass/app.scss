@@ -1,0 +1,126 @@
+// Your custom settings file to override Foundation defaults
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+// ----------------------------------------
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+// @import "compass/css3";
+// @import "foundation/settings";
+// @import "foundation/functions/all";
+
+// Control which mixins you have access too
+
+// @import "foundation/mixins/clearfix";
+// @import "foundation/mixins/css-triangle";
+// @import "foundation/mixins/font-size";
+
+// Must include next two for semantic grid to work
+
+// @import "foundation/mixins/respond-to";
+// @import "foundation/mixins/semantic-grid";
+
+// @import "modular-scale";
+// @import "foundation/common/globals";
+
+// Must include the grid for any responsiveness
+
+// @import "foundation/components/grid";
+
+// Control which common styles get compiled
+
+// @import "foundation/common/typography";
+// @import "foundation/common/forms";
+
+// Control which components you get if customizing
+
+// @import "foundation/components/modules/buttons";
+// @import "foundation/components/modules/tabs";
+// @import "foundation/components/modules/ui";
+// @import "foundation/components/modules/topbar";
+// @import "foundation/components/modules/navbar";
+// @import "foundation/components/modules/orbit";
+// @import "foundation/components/modules/reveal";
+// @import "foundation/components/modules/offcanvas";
+// @import "foundation/components/modules/clearing";
+// @import "foundation/components/modules/joyride";
+
+// Media Queries Overrides
+// @import "foundation/components/modules/mqueries";
+
+/* @group Default */
+
+body { 
+  -moz-font-feature-settings: "liga=1, dlig=1"; 
+  -moz-font-feature-settings: "liga", "dlig"; /* EDIT: new syntax for FF 15+ */ 
+  -ms-font-feature-settings: "liga", "dlig"; 
+  -o-font-feature-settings: "liga", "dlig"; 
+  -webkit-font-feature-settings: "liga", "dlig"; 
+  font-feature-settings: "liga", "dlig";
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+	font-family: Lobster, cursive;
+	text-transform: lowercase;
+}
+
+.social {
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  background: no-repeat center center #a1b980;
+  border-radius: 40px;
+  display: block;
+  height: 80px;
+  margin: 0 auto;
+  text-align: center;
+  text-indent: -9999em;
+  width: 80px;
+}
+
+.social:hover {
+  background-color: #839a62;
+}
+
+.social.appdotnet {
+  background-image: url("../images/social/appdotnet.png");
+}
+
+.social.email {
+  background-image: url("../images/social/email.png");
+}
+
+.social.facebook {
+  background-image: url("../images/social/facebook.png");
+}
+
+.social.twitter {
+  background-image: url("../images/social/twitter.png");
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .social.appdotnet {
+    background-image: url("../images/social/appdotnet@2x.png");
+    background-size: 35px 32px;
+  }
+  
+  .social.email {
+    background-image: url("../images/social/email@2x.png");
+    background-size: 35px 35px;
+  }
+  
+  .social.facebook {
+    background-image: url("../images/social/facebook@2x.png");
+    background-size: 17px 32px;
+  }
+  
+  .social.twitter {
+    background-image: url("../images/social/twitter@2x.png");
+    background-size: 43px 35px;
+  }
+}
+
+/* @end */
