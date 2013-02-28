@@ -1,9 +1,14 @@
 auto: true
 url: http://pandamonia.us
 permalink: /
-asset_pipeline:
-  bundle: true            # Default = true
-  compress: true          # Default = true
-  output_path: assets     # Default = assets
-  display_path: nil       # Default = nil
-  gzip: false             # Default = false
+assets:
+  dirname: assets
+  baseurl: /assets/
+  sources:
+    - _assets/javascripts
+    - _assets/sass
+    - _assets/images
+  compress:
+    js:   ~
+    css:  sass
+  cachebust: hard
