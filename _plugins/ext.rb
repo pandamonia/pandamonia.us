@@ -1,1 +1,3 @@
-require "jekyll-assets"
+require 'sass'
+require 'uglifier'
+require 'jekyll-assets'
