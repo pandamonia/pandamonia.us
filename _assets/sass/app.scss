@@ -7,13 +7,13 @@
 /* @group Default */
 
 body { 
-  -moz-font-feature-settings: "liga=1, dlig=1"; 
-  -moz-font-feature-settings: "liga", "dlig"; /* EDIT: new syntax for FF 15+ */ 
-  -ms-font-feature-settings: "liga", "dlig"; 
-  -o-font-feature-settings: "liga", "dlig"; 
-  -webkit-font-feature-settings: "liga", "dlig"; 
-  font-feature-settings: "liga", "dlig";
-  text-rendering: optimizeLegibility;
+	-moz-font-feature-settings: "liga=1, dlig=1"; 
+	-moz-font-feature-settings: "liga", "dlig"; /* EDIT: new syntax for FF 15+ */ 
+	-ms-font-feature-settings: "liga", "dlig"; 
+	-o-font-feature-settings: "liga", "dlig"; 
+	-webkit-font-feature-settings: "liga", "dlig"; 
+	font-feature-settings: "liga", "dlig";
+	text-rendering: optimizeLegibility;
 }
 
 h1 {
@@ -22,58 +22,58 @@ h1 {
 }
 
 .social {
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  background: no-repeat center center #a1b980;
-  border-radius: 40px;
-  display: block;
-  height: 80px;
-  margin: 0 auto;
-  text-align: center;
-  text-indent: -9999em;
-  width: 80px;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	background: no-repeat center center #a1b980;
+	border-radius: 40px;
+	display: block;
+	height: 80px;
+	margin: 0 auto;
+	text-align: center;
+	text-indent: -9999em;
+	width: 80px;
 }
 
 .social:hover {
-  background-color: #839a62;
+	background-color: #839a62;
 }
 
 .social.appdotnet {
-  background-image: url("../images/social/appdotnet.png");
+	background-image: url("../images/social/appdotnet.png");
 }
 
 .social.email {
-  background-image: url("../images/social/email.png");
+	background-image: url("../images/social/email.png");
 }
 
 .social.facebook {
-  background-image: url("../images/social/facebook.png");
+	background-image: url("../images/social/facebook.png");
 }
 
 .social.twitter {
-  background-image: url("../images/social/twitter.png");
+	background-image: url("../images/social/twitter.png");
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
-  .social.appdotnet {
-    background-image: url("../images/social/appdotnet@2x.png");
-    background-size: 35px 32px;
-  }
-  
-  .social.email {
-    background-image: url("../images/social/email@2x.png");
-    background-size: 35px 35px;
-  }
-  
-  .social.facebook {
-    background-image: url("../images/social/facebook@2x.png");
-    background-size: 17px 32px;
-  }
-  
-  .social.twitter {
-    background-image: url("../images/social/twitter@2x.png");
-    background-size: 43px 35px;
-  }
+	.social.appdotnet {
+		background-image: url("../images/social/appdotnet@2x.png");
+		background-size: 35px 32px;
+	}
+	
+	.social.email {
+		background-image: url("../images/social/email@2x.png");
+		background-size: 35px 35px;
+	}
+	
+	.social.facebook {
+		background-image: url("../images/social/facebook@2x.png");
+		background-size: 17px 32px;
+	}
+	
+	.social.twitter {
+		background-image: url("../images/social/twitter@2x.png");
+		background-size: 43px 35px;
+	}
 }
 
 /* @end */
