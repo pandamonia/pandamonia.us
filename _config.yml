@@ -6,7 +6,6 @@ assets:
   baseurl: /assets/
   sources:
     - _assets/javascripts
-  # - _assets/stylesheets
     - _assets/sass
     - _assets/images
   #
@@ -19,7 +18,7 @@ assets:
   #     js   => 'yui', 'uglifier', nil
   #
   compress:
-  # js:   
+    js:   uglifier
     css:  sass
   #
   # Sets cachebusting policy for generated assets.
