@@ -17,8 +17,10 @@ h1 {
 	text-transform: lowercase;
 }
 
-nav {
-
+nav .divider {
+	@media #{$topbar-media-query} {
+		display: none;
+	}
 }
 
 .social {
