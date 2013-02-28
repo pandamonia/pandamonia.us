@@ -5,10 +5,10 @@ require 'zurb-foundation'
 # -----------------------------------------------
 
 http_path = "http://pandamonia.us/"
-css_dir = "assets/css"
-sass_dir = "assets/sass"
-images_dir = "assets/images"
-javascripts_dir = "assets/js"
+css_dir = "css"
+sass_dir = "_sass"
+images_dir = "images"
+javascripts_dir = "js"
 
 # -----------------------------------------------
 # Output
