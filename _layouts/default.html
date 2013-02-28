@@ -10,14 +10,9 @@
   <title>{{ page.title }} &bull; Pandamonia</title>
   
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-
-{% css_asset_tag global %}
-- /_assets/sass/app.scss
-{% endcss_asset_tag %}
-
-{% javascript_asset_tag global %}
-- /_assets/app.js
-{% endjavascript_asset_tag %}
+  {{ stylesheet app }}
+  
+  {{ javascript app }}
 </head>
 <body>
   <div class="row">
