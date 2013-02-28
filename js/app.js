@@ -1,7 +1,5 @@
-//= require retina
-//= require foundation/app
 ;(function ($, window, undefined) {
-  $(document).ready(function() {
-
+  $(function() {
+	  $(document).foundation();
   });
 })(jQuery, this);

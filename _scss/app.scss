@@ -17,36 +17,45 @@ h1 {
 	text-transform: lowercase;
 }
 
+nav {
+
+}
+
 .social {
 	-webkit-border-radius: 40px;
 	-moz-border-radius: 40px;
 	background: no-repeat center center #a1b980;
 	border-radius: 40px;
 	display: block;
-	height: 80px;
+	height: 60px;
 	margin: 0 auto;
 	text-align: center;
 	text-indent: -9999em;
-	width: 80px;
+	width: 60px;
 
 	&:hover {
 		background-color: #839a62;
 	}
 
 	&.appdotnet {
-		@include at2x('../images/social/appdotnet', 35px, 32px, '.png');
+		@include at2x('social/appdotnet', 35px, 32px, '.png');
 	}
 
 	&.email {
-		@include at2x('../images/social/email', 35px, 35px, '.png');
+		@include at2x('social/email', 35px, 35px, '.png');
 	}
 
 	&.facebook {
-		@include at2x('../images/social/facebook', 17px, 35px, '.png');
+		@include at2x('social/facebook', 17px, 35px, '.png');
 	}
 
 	&.twitter {
-		@include at2x('../images/social/twitter', 43px, 35px, '.png');
+		@include at2x('social/twitter', 43px, 35px, '.png');
+	}
+	
+	@media only screen and (min-width: 400px) {
+		height: 80px;
+		width: 80px;
 	}
 }
 

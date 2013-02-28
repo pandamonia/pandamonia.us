@@ -1,0 +1,37 @@
+// Background color for the top bar
+$topbar-bg: #fff;
+
+// Height and margin
+/* $topbar-height: 45px; */
+$topbar-margin-bottom: emCalc(30px);
+
+// Control Input height for top bar
+/* $topbar-input-height: 2.45em; */
+
+// Controlling the styles for the title in the top bar
+$topbar-title-weight: normal;
+$topbar-title-font-size: emCalc(17px);
+
+// Set the link colors and styles for top-level nav
+$topbar-link-color: #000;
+$topbar-link-weight: bold;
+/* $topbar-link-font-size: emCalc(13px); */
+
+// Style the top bar dropdown elements
+$topbar-dropdown-bg: #fff;
+$topbar-dropdown-link-color: #000;
+/* $topbar-dropdown-toggle-size: 5px; */
+$topbar-dropdown-toggle-color: #000;
+$topbar-dropdown-toggle-alpha: 0.5;
+
+// Top menu icon styles
+$topbar-menu-link-transform: uppercase;
+/* $topbar-menu-link-font-size: emCalc(13px); */
+$topbar-menu-link-weight: bold;
+$topbar-menu-link-color: #000;
+$topbar-menu-icon-color: #000;
+$topbar-menu-link-color-toggled: #888;
+$topbar-menu-icon-color-toggled: #888;
+
+// Transitions and breakpoint styles
+$topbar-transition-speed: 300ms;
