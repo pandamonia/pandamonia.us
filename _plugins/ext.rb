@@ -1,19 +1,6 @@
+# require 'sassy-math'
+# require 'modular-scale'
 require 'zurb-foundation'
-=begin
-require 'compass'
-
-sassy_math_root = Gem::Specification.find_by_name("sassy-math").gem_dir
-Compass::Frameworks.register("foundation",
-  :path => File.join(sassy_math_root, "compass", "lib"),
-  :stylesheets_directory => File.join(sassy_math_root, "compass", "stylesheets")
-)
-
-modular_scale_root = Gem::Specification.find_by_name("modular-scale").gem_dir
-Sprockets.append_path File.join(modular_scale_root, "stylesheets")
-
-foundation_root = Gem::Specification.find_by_name("zurb-foundation").gem_dir
-Sprockets.append_path File.join(foundation_root, "scss")
-=end
 
 require 'sass'
 require 'uglifier'
