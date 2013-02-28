@@ -8,6 +8,7 @@ Sprockets.append_path File.join(modular_scale_root, "stylesheets")
 
 sassy_math_root = Gem::Specification.find_by_name("sassy-math").gem_dir
 Sprockets.append_path File.join(sassy_math_root, "compass", "stylesheets")
+Sprockets.append_path File.join(sassy_math_root, "compass", "lib")
 
 require 'sass'
 require 'uglifier'
