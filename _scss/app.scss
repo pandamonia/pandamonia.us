@@ -1,22 +1,7 @@
 @import "settings";
 @import "foundation";
-@import "retina";
-
-$clear: rgba(0, 0, 0, 0);
-
-@mixin transform($transform) {
-	-o-transform: $transform;
-	-moz-transform: $transform;
-	-webkit-transform: $transform;
-	transform: $transform;
-}
-
-@mixin transition($transition) {
-	-moz-transition: $transition;
-	-o-transition: $transition;
-	-webkit-transition: $transition;
-	transition: $transition;
-}
+@import "mixins";
+@import "variables";
 
 body { 
 	-moz-font-feature-settings: "liga=1, dlig=1"; 
