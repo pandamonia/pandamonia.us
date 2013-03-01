@@ -5,10 +5,17 @@
 $clear: rgba(0, 0, 0, 0);
 
 @mixin transform($transform) {
-	-webkit-transform: $transform;
-	-moz-transform: $transform;
-	transform: $transform;
 	-o-transform: $transform;
+	-moz-transform: $transform;
+	-webkit-transform: $transform;
+	transform: $transform;
+}
+
+@mixin transition($transition) {
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	-webkit-transition: $transition;
+	transition: $transition;
 }
 
 body { 
@@ -106,6 +113,7 @@ footer {
 	}
 	
 	.social {
+		@include transition(background-color 0.3s linear);
 		-webkit-border-radius: 40px;
 		-moz-border-radius: 40px;
 		background: no-repeat center center #a1b980;
