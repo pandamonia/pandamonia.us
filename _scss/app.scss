@@ -14,9 +14,23 @@ body {
 
 h1 {
 	font-family: Lobster, cursive;
+	
+	a {
+		width: 300px !important;
+	}
+}
+
+.keo {
+	@include at2x('keo/keo', 45px, 45px, '.png');
+	width: 45px;
+	height: 45px;
+	display: block;
+	margin-right: 10px;
+	float: left;
 }
 
 nav {
+	border-bottom: 1px solid #004b03;
 	text-transform: lowercase;
 	
 	.divider {
@@ -24,11 +38,25 @@ nav {
 			display: none;
 		}
 	}
+	
+	ul, li a {
+		background: rgba(0,0,0,0) !important;
+	}
 }
 
 footer {
 	background-color: #c4d295;
+	color: #3b4330;
 	text-align: center;
+	padding-top: 25px;
+	
+	h3 {
+		text-transform: uppercase;
+	}
+	
+	p {
+		line-height: 125%;
+	}
 	
 	ul {
 		float: none;
@@ -38,19 +66,12 @@ footer {
 		position: relative;
 	}
 	
-	.copyright {
-		background-color: #849b64;
-		color: white;
-		font-size: 11pt;
-		line-height: 125%;
-		padding: 25pt 0;
-		
-		a {
-			color: white;
-			text-decoration: underline;
-		}
+	.contact-us {
+		max-width: 450px;
+		margin: 0 auto 25px;
+		float: none;
 	}
-
+	
 	.social {
 		-webkit-border-radius: 40px;
 		-moz-border-radius: 40px;
@@ -58,7 +79,7 @@ footer {
 		border-radius: 40px;
 		display: block;
 		height: 60px;
-		margin: 0 auto;
+		margin: 0 auto 25px;
 		text-align: center;
 		text-indent: -9999em;
 		width: 60px;
@@ -69,23 +90,61 @@ footer {
 		
 		&.appdotnet {
 			@include at2x('social/appdotnet', 35px, 32px, '.png');
+			
+			@media only screen and (max-width: 360px) {
+				background-size: 28px 26px !important;
+			}
 		}
 	
 		&.email {
 			@include at2x('social/email', 35px, 35px, '.png');
+			
+			@media only screen and (max-width: 360px) {
+				background-size: 28px 28px !important;
+			}
 		}
 	
 		&.facebook {
 			@include at2x('social/facebook', 17px, 35px, '.png');
+						
+			@media only screen and (max-width: 360px) {
+				background-size: 14px 28px !important;
+			}
 		}
 	
 		&.twitter {
 			@include at2x('social/twitter', 43px, 35px, '.png');
+						
+			@media only screen and (max-width: 360px) {
+				background-size: 34px 28px !important;
+			}
 		}
 		
 		@media only screen and (min-width: 400px) {
 			height: 80px;
 			width: 80px;
+		}
+	}
+	
+	.copyright {
+		background-color: #849b64;
+		color: white;
+		font-size: 11pt;
+		padding-top: 25pt;
+		padding-bottom: 25pt;
+		
+		a {
+			color: white;
+			text-decoration: underline;
+		}
+		
+		p {
+			display: inherit;
+			margin-bottom: 0;
+			
+			@media only screen and (min-width: 650px) {
+				display: inline;
+			}
 		}
 	}
 }
