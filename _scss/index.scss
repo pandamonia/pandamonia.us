@@ -1,19 +1,19 @@
-@import "mixins";
+@import "settings";
 
 .hero-container {
 	margin-bottom: 20px;
 }
 
 .hero {
-	@include at2x('hero/acey-deucey-2', 790px, 400px, '.png');
-	@include boxShadow(inset 0 0 50px black);
 	background-position: center center;
+	display: table;
 	height: 300px !important;
 	text-align: center;
 	position: relative;
-	display: table;
 	
 	& > .row {
+		@include at2x('hero/acey-deucey-2', 790px, 400px, '.png');
+		@include boxShadow(inset 0 0 50px black);
 		display: table-cell;
 		text-shadow: 0 0 3px black;
 		vertical-align: middle;
@@ -48,8 +48,7 @@
 		@media only screen and (min-width: 768px) {
 			border-left: 1px solid #b4b4b4;
 			height: 288px;
-			margin-left: 5px;
-			padding-left: 15px;
+			padding-left: 20px;
 		}
 	}
 	

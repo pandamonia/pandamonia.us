@@ -1,14 +1,41 @@
-@import "foundation/_foundation-global";
+@import "foundation/foundation-global";
+@import "retina";
+
+@mixin transform($transforms...) {
+	-o-transform: $transforms;
+	-moz-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin transition($transitions...) {
+	-moz-transition: $transitions;
+	-o-transition: $transitions;
+	-webkit-transition: $transitions;
+	transition: $transitions;
+}
+
+@mixin boxShadow($shadows...) {
+	-moz-box-shadow: $shadows;
+	-o-box-shadow: $shadows;
+	-webkit-box-shadow: $shadows;
+	box-shadow: $shadows;
+}
+
+@mixin ligatures {
+	-moz-font-feature-settings: "liga=1, dlig=1"; 
+	-moz-font-feature-settings: "liga", "dlig"; /* EDIT: new syntax for FF 15+ */ 
+	-ms-font-feature-settings: "liga", "dlig"; 
+	-o-font-feature-settings: "liga", "dlig"; 
+	-webkit-font-feature-settings: "liga", "dlig"; 
+	font-feature-settings: "liga", "dlig";
+}
+
+$clear: rgba(0, 0, 0, 0);
+$primary-color: #839a62;
 
 // Background color for the top bar
 $topbar-bg: #fff;
-
-// Height and margin
-$topbar-height: 45px;
-$topbar-margin-bottom: emCalc(30px);
-
-// Control Input height for top bar
-/* $topbar-input-height: 2.45em; */
 
 // Controlling the styles for the title in the top bar
 $topbar-title-weight: normal;
@@ -17,23 +44,19 @@ $topbar-title-font-size: emCalc(30px);
 // Set the link colors and styles for top-level nav
 $topbar-link-color: #004b03;
 $topbar-link-weight: bold;
-/* $topbar-link-font-size: emCalc(13px); */
 
 // Style the top bar dropdown elements
 $topbar-dropdown-bg: #fff;
 $topbar-dropdown-link-color: #004b03;
-/* $topbar-dropdown-toggle-size: 5px; */
 $topbar-dropdown-toggle-color: #000;
-$topbar-dropdown-toggle-alpha: 0.5;
 
 // Top menu icon styles
 $topbar-menu-link-transform: lowercase;
-/* $topbar-menu-link-font-size: emCalc(13px); */
 $topbar-menu-link-weight: bold;
 $topbar-menu-link-color: #004b03;
 $topbar-menu-icon-color: #004b03;
-$topbar-menu-link-color-toggled: #888;
-$topbar-menu-icon-color-toggled: #888;
 
 // Transitions and breakpoint styles
 $topbar-transition-speed: 300ms;
+$topbar-breakpoint: emCalc(640px); // Change to 9999px for always mobile layout
+
