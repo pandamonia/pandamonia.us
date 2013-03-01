@@ -1,9 +1,7 @@
 @import "foundation/_foundation-global";
 
-$clear: rgba(0,0,0,0);
-
 // Background color for the top bar
-$topbar-bg: $clear;
+$topbar-bg: #fff;
 
 // Height and margin
 $topbar-height: 45px;
@@ -22,7 +20,7 @@ $topbar-link-weight: bold;
 /* $topbar-link-font-size: emCalc(13px); */
 
 // Style the top bar dropdown elements
-$topbar-dropdown-bg: $clear;
+$topbar-dropdown-bg: #fff;
 $topbar-dropdown-link-color: #004b03;
 /* $topbar-dropdown-toggle-size: 5px; */
 $topbar-dropdown-toggle-color: #000;

@@ -2,6 +2,16 @@
 @import "foundation";
 @import "retina";
 
+$clear: rgba(0, 0, 0, 0);
+
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	transform: $transform;
+	-o-transform: $transform;
+}
+
+
 body { 
 	-moz-font-feature-settings: "liga=1, dlig=1"; 
 	-moz-font-feature-settings: "liga", "dlig"; /* EDIT: new syntax for FF 15+ */ 
@@ -30,14 +40,42 @@ h1 {
 }
 
 nav {
-	border-bottom: 1px solid #004b03;
 	text-transform: lowercase;
+	padding-bottom: 30px !important;
 	
 	.divider {
-		@media #{$topbar-media-query} {
+		background-color: $clear;
+		border: none !important;
+
+		&:before {
+			@include transform(rotateZ(20deg));
+			color: #839a62;
+			content: '|';
 			display: none;
+			font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+			font-size: 32px;
+			font-weight: 100;
+			position: absolute;
+			top: -5px;
+			
+			@media #{$topbar-media-query} {
+				display: block !important;
+			}
 		}
 	}
+	
+	a {
+		background: $clear !important;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.nav-border {
+	border-bottom: 1px solid #004b03;
+	height: 11px;
 }
 
 footer {
