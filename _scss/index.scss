@@ -95,6 +95,10 @@
 	padding-bottom: 20px;
 }
 
+.apps, .app {
+	width: 100%;
+}
+
 .app {
 	a {
 		color: black !important;		
@@ -123,10 +127,9 @@
 			font-size: 18pt;
 			
 			div {
-				position: absolute;
-				width: 100%;
 				bottom: 0;
 				padding-bottom: 25px;
+				width: 100%;
 			}
 			
 			.triangle {
