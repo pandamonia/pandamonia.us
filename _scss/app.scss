@@ -32,7 +32,7 @@ h1 {
 	font-family: Lobster, cursive;
 	
 	a {
-		width: 300px !important;
+		min-width: 300px;
 	}
 }
 
@@ -46,8 +46,8 @@ h1 {
 }
 
 nav {
+	margin-top: 10px !important;
 	text-transform: lowercase;
-	padding-bottom: 30px !important;
 	
 	.divider {
 		background-color: $clear;
@@ -81,7 +81,11 @@ nav {
 
 .nav-border {
 	border-bottom: 1px solid #004b03;
-	height: 11px;
+	height: 9px;
+}
+
+.content-padding {
+	height: 20px;
 }
 
 footer {

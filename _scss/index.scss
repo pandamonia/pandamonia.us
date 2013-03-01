@@ -1,0 +1,82 @@
+@import "retina";
+
+@mixin boxShadow($box-shadow) {
+	-moz-box-shadow: $box-shadow;
+	-o-box-shadow: $box-shadow;
+	-webkit-box-shadow: $box-shadow;
+	box-shadow: $box-shadow;
+}
+
+.hero-container {
+	margin-bottom: 20px;
+}
+
+.hero {
+	@include at2x('hero/acey-deucey-2', 790px, 400px, '.png');
+	@include boxShadow(inset 0 0 50px black);
+	background-position: center center;
+	height: 300px !important;
+	text-align: center;
+	position: relative;
+	display: table;
+	
+	& > .row {
+		display: table-cell;
+		text-shadow: 0 0 3px black;
+		vertical-align: middle;
+	}
+	
+	h2 {
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 27pt;
+		margin: 15px inherit 0;
+	}
+	
+	h3 {
+		color: #fff;
+		margin: 0 inherit 0;
+	}
+	
+	.icon {
+		img {
+			@include boxShadow(0 0 30px black);
+			-o-border-radius: 23px;
+			-moz-border-radius: 23px;
+			-webkit-border-radius: 23px;
+			border-radius: 23px;
+			margin: 0 auto;
+		}
+	}
+}
+
+.hero-aside {
+	& > div {
+		@media only screen and (min-width: 768px) {
+			border-left: 1px solid #b4b4b4;
+			height: 288px;
+			margin-left: 5px;
+			padding-left: 15px;
+		}
+	}
+	
+	h2 {
+		font-size: 24pt;
+		margin-bottom: 0;
+	}
+	
+	h3 {
+		border-bottom: 1px solid #b4b4b4;
+		font-size: 12pt;
+		padding-bottom: 10px;
+	}
+	
+	p {
+		font-size: 10pt;
+	}
+}
+
+.after-hero {
+	border-top: 1px solid #b4b4b4;
+	padding-bottom: 20px;
+}
