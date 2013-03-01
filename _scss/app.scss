@@ -53,7 +53,7 @@ nav {
 		background-color: $clear;
 		border: none !important;
 
-		&:before {
+		&:not(:first-of-type):before {
 			@include transform(rotateZ(20deg));
 			color: #839a62;
 			content: '|';
@@ -72,10 +72,10 @@ nav {
 	
 	a {
 		background: $clear !important;
-		
-		&:hover {
-			text-decoration: underline;
-		}
+	}
+	
+	.right a:hover {
+		text-decoration: underline;
 	}
 }
 
