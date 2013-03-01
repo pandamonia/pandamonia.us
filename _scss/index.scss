@@ -187,45 +187,63 @@
 	}
 }
 
-.twitter {
-	border-left: 1px solid #b4b4b4;
-
+.twitter, .appdotnet {
 	a {
 		color: #849b64;
 	}
 	
-	.twitter-bird {
-		@include at2x('social/twitter-green', 28px, 23px, '.png');
-		display: inline-block;
-		vertical-align: baseline;
-		width: 28px;
-		height: 23px;
-		margin-right: 10px;
-	}
-	
 	.followers {
+		text-transform: uppercase;
+			
 		.followers-count {
 			font-size: 36pt;
+			padding-right: 10px;
+		}
+	}
+
+	.title {
+		font-size: 20pt;
+		font-weight: bold;
+		text-align: center;
+		width: 50% !important;
+
+		@media only screen and (max-width: 768px) {
+			width: 100% !important;
+		}
+		
+		a {
+			color: #839a62 !important;
+			padding: 0.5em !important;
 		}
 	}
 	
-	.tweet {
+	.post {
 		margin-bottom: 20px;
 		
-		.tweet-content {
+		.post-content {
 			margin-bottom: 0;
 		}
 		
-		.tweet-time {
+		.post-time {
 			color: #859c65;
 		}
 	}
 	
-	.followers {
-		text-transform: uppercase;
-		
-		.followers-count {
-			
-		}
+	.mascot {
+		display: inline-block;
+		margin-right: 10px;
+		vertical-align: baseline;
 	}
+}
+
+.twitter .mascot {
+	@include at2x('social/twitter-green', 28px, 23px, '.png');
+	height: 23px;
+	width: 28px;
+}
+
+.appdotnet .mascot {
+	@include at2x('social/appdotnet-green', 27px, 23px, '.png');
+	height: 23px;
+	width: 27px;
 }
