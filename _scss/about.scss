@@ -27,12 +27,25 @@ h3 {
 	}
 }
 
-.gravatar img {
-	@include boxShadow(0 3px 8px rgba(0, 0, 0, 0.5));
-	-moz-border-radius: 50%;
-	-o-border-radius: 50%;
-	-webkit-border-radius: 50%;
-	border-radius: 50%;
-	border: 7px solid white;
-	margin: 0 auto 10px;
+.gravatar {
+	.img {
+		@include boxShadow(0 3px 8px rgba(0, 0, 0, 0.5));
+		-moz-border-radius: 100px;
+		-o-border-radius: 100px;
+		-webkit-border-radius: 100px;
+		border: 7px solid white;
+		border-radius: 100px;
+		height: 200px;
+		margin: 0 auto 20px;
+		position: relative;
+		width: 200px;
+		
+		.alex & {
+			background: url('http://gravatar.com/avatar/4d00c4c07f26954a622ba72328f871e8?s=200') center no-repeat;
+		}
+		
+		.zach & {
+			background: url('http://gravatar.com/avatar/84c0d9b7f0f1945fc58910b4a63ed313?s=200') center no-repeat;
+		}
+	}
 }
