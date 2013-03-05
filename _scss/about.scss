@@ -31,7 +31,6 @@ h3 {
 	.img {
 		@include boxShadow(0 3px 8px rgba(0, 0, 0, 0.5));
 		-moz-border-radius: 100px;
-		-o-border-radius: 100px;
 		-webkit-border-radius: 100px;
 		border: 7px solid white;
 		border-radius: 100px;

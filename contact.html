@@ -3,4 +3,31 @@ layout: default
 title: Contact
 group: "navigation"
 weight: 4
+css: contact.css
+js:
+- vendor/jquery.autosize.min.js
+- vendor/jquery.validate.min.js
+- contact.js
 ---
+
+	<form id="contact">
+		<div class="row">
+			<div class="large-6 columns" id="name-container">
+				<input type="text" id="name" name="name" placeholder="your name" />
+			</div>
+			<div class="large-6 columns" id="email container">
+				<input type="email" id="email" name="email" placeholder="your email" />
+			</div>
+		</div>
+		<div class="row">&nbsp;</div>
+		<div class="row">
+			<div class="large-12 columns" id="message-container">
+				<textarea id="message" name="message" placeholder="your message"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-12 columns" id="submit-container">
+				<button type="submit" class="button radius">Submit</button>
+			</div>
+		</div>
+	</form>

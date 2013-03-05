@@ -1,0 +1,57 @@
+@import "settings";
+@import "compass/css3/images";
+
+#contact {
+	input[type="text"],
+	input[type="password"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="month"],
+	input[type="week"],
+	input[type="email"],
+	input[type="number"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="time"],
+	input[type="url"],
+	textarea {
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		
+		&.error {
+			-moz-border-radius: 3px 3px 0 0;
+			-webkit-border-radius: 3px 3px 0 0;
+			border-radius: 3px 3px 0 0;
+		}
+		
+		&.error + small.error {
+			-moz-border-radius: 0 0 3px 3px;
+			-webkit-border-radius: 0 0 3px 3px;
+			border-radius: 0 0 3px 3px;
+		}
+		
+		&:focus {
+			@include boxShadow(0 0 3px 2px #75b9f0);
+		}
+	}
+
+	textarea {
+		min-height: 170px;
+	}
+	
+	.button {
+		@include background-image(linear-gradient(-90deg, #60c160, #51a351));
+		border-color: #458a45;
+		height: 30px;
+		font-weight: normal;
+		padding: 0;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+		width: 83px;
+	}
+	
+	#submit-container {
+		text-align: right;
+	}
+}
