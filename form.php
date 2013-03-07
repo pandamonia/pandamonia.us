@@ -1,8 +1,8 @@
 <?php
 
-require "php/phpmailer/class.phpmailer.php";
+require_once "php/phpmailer/class.phpmailer.php";
 
-if (!(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])) {
+if (!(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))) {
 	$result = array('error' => "Invalid request");
 	echo json_encode($result);
 	die();
