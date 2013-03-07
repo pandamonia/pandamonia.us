@@ -2,6 +2,12 @@
 
 require "php/phpmailer/class.phpmailer.php";
 
+if (!(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])) {
+	$result = array('error' => "Invalid request");
+	echo json_encode($result);
+	die();
+}
+
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
 $name = htmlspecialchars($name, ENT_COMPAT, 'UTF-8');
 
@@ -23,7 +29,12 @@ try {
 	$mail->Port = 587;
 	$mail->Username = 'support@pandamonia.us';
 	$mail->Password = 'haw-od-ag-hein-hoat-ut-by';
-	$mail->Subject = '[Pandamonia] New Message from ' . $name;
+	$mail->Subject = "[Pandamonia] New Message from $name";
+	
+	$mail->SetFrom('support@pandamonia.us', 'Pandamonia Support');
+	$mail->AddAddress('support@pandamonia.us', 'Pandamonia Support');
+	$mail->AddCC($email, $name);
+	$mail->MsgHTML($message);
 	$mail->Send();
 	
 	$result = array("success" => true);
