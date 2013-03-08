@@ -50,7 +50,7 @@
 				request.fail(function(jqXHR, textStatus, errorThrown){
 					// log the error to the console
 					var error = 'Error: '+errorThrown,
-						$message = $("#error-alert .message"),
+						$message = $("#error-alert .message");
 					if ($message.length) {
 						$message.fadeOut('fast', function() {
 							$(this).text(error).fadeIn('fast');
