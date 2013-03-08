@@ -1,7 +1,3 @@
 auto: true
 url: http://pandamonia.us
 permalink: /
-assets:
-  compress:
-    css: sass
-    js:  uglifier
