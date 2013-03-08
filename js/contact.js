@@ -33,14 +33,14 @@
 				$inputs.prop("disabled", true);
 				
 				function error(string) {
-					var error = 'Error: '+string,
+					var error = '<strong>Error:</strong> '+string,
 						$message = $("#error-alert .message");
 					if ($message.length) {
 						$message.fadeOut('fast', function() {
-							$(this).text(error).fadeIn('fast');
+							$(this).html(error).fadeIn('fast');
 						});
 					} else {
-						$form.before($('<div class="row" id="error-alert"><div class="large-12 columns"><div data-alert class="alert-box alert round"><span class="message">'+error+'</span></div></div></div>').hide().fadeIn());
+						$form.before($('<div class="row" id="error-alert"><div class="large-12 columns"><div data-alert class="alert-box alert round"><span class="message">'+error+'</span><a href="#" class="close">&times;</a></div></div></div>').hide().fadeIn());
 					}
 					
 					$inputs.prop("disabled", false);
@@ -54,7 +54,7 @@
 					if (response.error)
 						return error(response.error);
 					
-					$form.before($('<div class="row" id="success-alert"><div class="large-12 columns"><div data-alert class="alert-box round"><span class="message">Thank you for getting in contact with us. We should respond within the next few business days.</span></div></div></div>').hide().fadeIn());
+					$form.before($('<div class="row" id="success-alert"><div class="large-12 columns"><div data-alert class="alert-box round"><span class="message"><strong>Thanks, '+$('#name').val()+'!</strong> We should respond within the next few business days.</span></div></div></div>').hide().fadeIn());
 				}).fail(function(jqXHR, textStatus, errorThrown){
 					error(errorThrown);
 				});

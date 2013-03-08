@@ -1,6 +1,38 @@
 @import "settings";
 @import "compass/css3/images";
 
+$include-html-classes: false;
+@import "foundation/foundation-global";
+@import "foundation/components/alert-boxes";
+
+#error-alert .alert {
+	$background-color: #f0d8d8;
+	@include alert($background-color, 3px);
+	color: darken($background-color, 60%);
+	
+	.close {
+		color: darken($background-color, 60%);
+		
+		&:hover {
+			color: darken($background-color, 80%);
+		}
+	}
+}
+
+#success-alert .alert {
+	$background-color: #dff0d8;
+	@include alert($background-color, 3px);
+	color: darken($background-color, 60%);
+	
+	.close {
+		color: darken($background-color, 60%);
+		
+		&:hover {
+			color: darken($background-color, 80%);
+		}
+	}
+}
+
 #contact {
 	input[type="text"],
 	input[type="password"],
