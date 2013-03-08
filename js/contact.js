@@ -42,6 +42,8 @@
 					} else {
 						$form.before($('<div class="row" id="error-alert"><div class="large-12 columns"><div data-alert class="alert-box alert round"><span class="message">'+error+'</span></div></div></div>').hide().fadeIn());
 					}
+					
+					$inputs.prop("disabled", false);
 				}
 
 				$.ajax({
@@ -52,14 +54,9 @@
 					if (response.error)
 						return error(response.error);
 					
-					$form.before($('<div class="row" id="success-alert"><div class="large-12 columns"><div data-alert class="alert-box round"><span class="message">Thank you for getting in contact with us. We should respond within the next few business days.</span></div></div></div>').hide().fadeIn()).fadeOut(function() {
-						$(this).remove();
-					});
+					$form.before($('<div class="row" id="success-alert"><div class="large-12 columns"><div data-alert class="alert-box round"><span class="message">Thank you for getting in contact with us. We should respond within the next few business days.</span></div></div></div>').hide().fadeIn());
 				}).fail(function(jqXHR, textStatus, errorThrown){
 					error(errorThrown);
-				}).always(function () {
-					// Reenable the inputs
-					$inputs.prop("disabled", false);
 				});
 			}
 		});
