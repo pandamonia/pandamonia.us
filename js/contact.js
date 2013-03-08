@@ -54,7 +54,7 @@
 					if (response.error)
 						return error(response.error);
 					
-					$form.before($('<div class="row" id="success-alert"><div class="large-12 columns"><div data-alert class="alert-box round"><span class="message"><strong>Thanks, '+$('#name').val()+'!</strong> We should respond within the next few business days.</span></div></div></div>').hide().fadeIn());
+					$form.before($('<div class="row" id="success-alert"><div class="large-12 columns"><div data-alert class="alert-box alert round"><span class="message"><strong>Thanks, '+$('#name').val()+'!</strong> We should respond within the next few business days.</span></div></div></div>').hide().fadeIn());
 				}).fail(function(jqXHR, textStatus, errorThrown){
 					error(errorThrown);
 				});
