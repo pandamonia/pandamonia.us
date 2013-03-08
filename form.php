@@ -2,15 +2,32 @@
 
 require_once "php/phpmailer/class.phpmailer.php";
 
-if (!(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))) {
-	$result = array('error' => "Invalid request");
+$has_name = isset($_POST['name']);
+$has_email = isset($_POST['email']);
+$has_message = isset($_POST['message']);
+
+if (!($has_name && $has_email && $has_message)) {
+	$error = '';
+	if (!$has_name) {
+		$error .= 'name';
+	}
+	if (!$has_email) {
+		if (strlen($error)) $error .= ', ';
+		$error .= 'email';
+		$did_add = true;
+	}
+	if (!$has_message) {
+		if (strlen($error)) $error .= ', ';
+		$error .= 'message';
+	}
+	$result = array('error' => 'Invalid fields: ' . $error);
 	echo json_encode($result);
 	die();
 }
 
-$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-$message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+$name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+$message = filter_var($_POST['message'], FILTER_SANITIZE_SPECIAL_CHARS);
 
 $mail = new PHPMailer();
 
@@ -25,6 +42,7 @@ try {
 	$mail->Username = 'support@pandamonia.us';
 	$mail->Password = 'haw-od-ag-hein-hoat-ut-by';
 	$mail->Subject = "[Pandamonia] New Message from $name";
+	$mail->CharSet = 'utf-8';
 	
 	$mail->SetFrom('support@pandamonia.us', 'Pandamonia Support');
 	$mail->AddAddress('support@pandamonia.us', 'Pandamonia Support');

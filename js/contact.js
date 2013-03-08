@@ -38,24 +38,34 @@
 					data: serializedData
 				});
 				
-			    // Callback handler that will be called on success.
-			    request.done(function(response, textStatus, jqXHR){
-			        // log a message to the console
-			        console.log("Hooray, it worked!");
-			    });
+				// Callback handler that will be called on success.
+				request.done(function(response, textStatus, jqXHR){
+					// log a message to the console
+					$form.before($('<div class="row" id="success-alert"><div class="large-12 columns"><div data-alert class="alert-box round"><span class="message">Thank you for getting in contact with us. We should respond within the next few business days.</span></div></div></div>').hide().fadeIn()).fadeOut(function() {
+						$(this).remove();
+					});
+				});
 			
-			    // Callback handler that will be called on failure.
-			    request.fail(function(jqXHR, textStatus, errorThrown){
-			        // log the error to the console
-			        console.error("The following error occured: " + textStatus, errorThrown);
-			    });
+				// Callback handler that will be called on failure.
+				request.fail(function(jqXHR, textStatus, errorThrown){
+					// log the error to the console
+					var error = 'Error: '+errorThrown,
+						$message = $("#error-alert .message"),
+					if ($message.length) {
+						$message.fadeOut('fast', function() {
+							$(this).text(error).fadeIn('fast');
+						});
+					} else {
+						$form.before($('<div class="row" id="error-alert"><div class="large-12 columns"><div data-alert class="alert-box alert round"><span class="message">'+error+'</span></div></div></div>').hide().fadeIn());
+					}
+				});
 			
-			    // Callback handler that will be called regardless
-			    // if the request failed or succeeded
-			    request.always(function () {
-			        // Reenable the inputs
-			        $inputs.prop("disabled", false);
-			    });
+				// Callback handler that will be called regardless
+				// if the request failed or succeeded
+				request.always(function () {
+					// Reenable the inputs
+					$inputs.prop("disabled", false);
+				});
 			}
 		});
 	});
