@@ -9,13 +9,8 @@ if (!(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']
 }
 
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-$name = htmlspecialchars($name, ENT_COMPAT, 'UTF-8');
-
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-$email = htmlspecialchars($email, ENT_COMPAT, 'UTF-8');
-
-$message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
-$message = htmlspecialchars($message, ENT_COMPAT, 'UTF-8');
+$message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 
 $mail = new PHPMailer();
 
