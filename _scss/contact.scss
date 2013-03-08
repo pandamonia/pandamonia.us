@@ -5,6 +5,10 @@ $include-html-classes: false;
 @import "foundation/foundation-global";
 @import "foundation/components/alert-boxes";
 
+.message {
+	line-height: 125%;
+}
+
 #error-alert .alert {
 	$background-color: #f0d8d8;
 	@include alert($background-color, 3px);
