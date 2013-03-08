@@ -1,4 +1,6 @@
+@import "foundation/foundation-global";
 @import "settings";
+@import "compass/css3/box-shadow";
 
 h2 {
 	text-align: center;
@@ -29,11 +31,9 @@ h3 {
 
 .gravatar {
 	.img {
-		@include boxShadow(0 3px 8px rgba(0, 0, 0, 0.5));
-		-moz-border-radius: 100px;
-		-webkit-border-radius: 100px;
+		@include box-shadow(0 3px 8px rgba(0, 0, 0, 0.5));
+		@include radius(100px);
 		border: 7px solid white;
-		border-radius: 100px;
 		height: 200px;
 		margin: 0 auto 20px;
 		position: relative;

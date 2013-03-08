@@ -1,5 +1,6 @@
 @import "settings";
 @import "compass/css3/images";
+@import "compass/css3/box-shadow";
 
 $include-html-classes: false;
 @import "foundation/foundation-global";
@@ -52,24 +53,18 @@ $include-html-classes: false;
 	input[type="time"],
 	input[type="url"],
 	textarea {
-		-moz-border-radius: 3px;
-		-webkit-border-radius: 3px;
-		border-radius: 3px;
+		@include radius(3px);
 		
 		&.error {
-			-moz-border-radius: 3px 3px 0 0;
-			-webkit-border-radius: 3px 3px 0 0;
-			border-radius: 3px 3px 0 0;
+			@include side-radius(top, 3px);
 		}
 		
 		&.error + small.error {
-			-moz-border-radius: 0 0 3px 3px;
-			-webkit-border-radius: 0 0 3px 3px;
-			border-radius: 0 0 3px 3px;
+			@include side-radius(bottom, 3px);
 		}
 		
 		&:focus {
-			@include boxShadow(0 0 3px 2px #75b9f0);
+			@include box-shadow(0 0 3px 2px #75b9f0);
 		}
 	}
 

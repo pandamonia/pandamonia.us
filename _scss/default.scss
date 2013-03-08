@@ -1,6 +1,7 @@
 @import "foundation/foundation-global";
 @import "settings";
 @import "foundation";
+@import "compass/css3/transform";
 
 body {
 	@include ligatures;
@@ -16,7 +17,7 @@ h1 {
 }
 
 .keo {
-	@include at2x('keo/keo', 45px, 45px, '.png');
+	@include at2x('keo/keo', 45px, 45px);
 	width: 45px;
 	height: 45px;
 	display: block;
@@ -33,7 +34,7 @@ nav {
 		border: none !important;
 
 		&:not(:first-of-type):before {
-			@include transform(rotateZ(20deg));
+			@include rotateZ(20deg);
 			color: #839a62;
 			content: '|';
 			display: none;
@@ -97,9 +98,8 @@ footer {
 	}
 	
 	.social {
-		@include transition(background-color 0.3s linear);
-		-webkit-border-radius: 40px;
-		-moz-border-radius: 40px;
+		@include single-transition(background-color, 0.3s);
+		@include radius(40px);
 		background: no-repeat center center #a1b980;
 		border-radius: 40px;
 		display: block;
@@ -114,7 +114,7 @@ footer {
 		}
 		
 		&.appdotnet {
-			@include at2x('social/appdotnet', 35px, 32px, '.png');
+			@include at2x('social/appdotnet', 35px, 32px);
 			
 			@media only screen and (max-width: 360px) {
 				background-size: 28px 26px !important;
@@ -122,7 +122,7 @@ footer {
 		}
 	
 		&.email {
-			@include at2x('social/email', 35px, 35px, '.png');
+			@include at2x('social/email', 35px, 35px);
 			
 			@media only screen and (max-width: 360px) {
 				background-size: 28px 28px !important;
@@ -130,7 +130,7 @@ footer {
 		}
 	
 		&.facebook {
-			@include at2x('social/facebook', 17px, 35px, '.png');
+			@include at2x('social/facebook', 17px, 35px);
 						
 			@media only screen and (max-width: 360px) {
 				background-size: 14px 28px !important;
@@ -138,7 +138,7 @@ footer {
 		}
 	
 		&.twitter {
-			@include at2x('social/twitter', 43px, 35px, '.png');
+			@include at2x('social/twitter', 43px, 35px);
 						
 			@media only screen and (max-width: 360px) {
 				background-size: 34px 28px !important;

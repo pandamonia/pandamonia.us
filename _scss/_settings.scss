@@ -1,12 +1,5 @@
 @import "retina";
 
-@mixin boxShadow($shadows...) {
-	-moz-box-shadow: $shadows;
-	-o-box-shadow: $shadows;
-	-webkit-box-shadow: $shadows;
-	box-shadow: $shadows;
-}
-
 @mixin ligatures {
 	-moz-font-feature-settings: "liga=1, dlig=1"; 
 	-moz-font-feature-settings: "liga", "dlig"; /* EDIT: new syntax for FF 15+ */ 
@@ -14,20 +7,6 @@
 	-o-font-feature-settings: "liga", "dlig"; 
 	-webkit-font-feature-settings: "liga", "dlig"; 
 	font-feature-settings: "liga", "dlig";
-}
-
-@mixin transform($transforms...) {
-	-o-transform: $transforms;
-	-moz-transform: $transforms;
-	-webkit-transform: $transforms;
-	transform: $transforms;
-}
-
-@mixin transition($transitions...) {
-	-moz-transition: $transitions;
-	-o-transition: $transitions;
-	-webkit-transition: $transitions;
-	transition: $transitions;
 }
 
 $clear: rgba(0, 0, 0, 0);
