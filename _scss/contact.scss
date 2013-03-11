@@ -1,9 +1,7 @@
+$include-html-classes: false;
 @import "settings";
 @import "compass/css3/images";
 @import "compass/css3/box-shadow";
-
-$include-html-classes: false;
-@import "foundation/foundation-global";
 @import "foundation/components/alert-boxes";
 
 .message {

@@ -1,8 +1,7 @@
-@import "foundation/foundation-global";
+@import "settings";
 @import "compass/css3/filter";
 @import "compass/css3/transform";
 @import "compass/css3/transition";
-@import "settings";
  
 @mixin desaturate {
 	@include filter(grayscale(100%));
