@@ -2,7 +2,6 @@
 	$(function() {
 		$.getJSON('https://alpha-api.app.net/stream/0/users/40838/posts', function(data) {
 			data = data['data'][0];
-			console.log(data);
 			$('.appdotnet .post-content').html(function() {
 			    var tweet = data['text'].replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+/g, function(url) { 
 			        var wrap = document.createElement('div');
@@ -24,7 +23,6 @@
 		
 		$.getJSON('http://api.twitter.com/1/statuses/user_timeline/pandamonia.json?count=1&include_rts=true&exclude_replies=false&callback=?', function(data) {
 			data = data[0];
-			console.log(data);
 			$('.twitter .post-content').html(function() {
 			    var tweet = data['text'].replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+/g, function(url) { 
 			        var wrap = document.createElement('div');
