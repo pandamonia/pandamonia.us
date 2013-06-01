@@ -1,86 +1,35 @@
 $include-html-classes: false;
 @import "settings";
-@import "compass/css3/images";
 @import "compass/css3/box-shadow";
 
-.message {
-	line-height: 125%;
+table {
+	width: 100%;
 }
 
-#error-alert .alert {
-	$background-color: #f0d8d8;
-	@include alert($background-color, 3px);
-	color: darken($background-color, 60%);
+th {
+	font-size: 20px !important;
+}
+
+.img {
+	@include box-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+	@include radius(50%);
+	background-size: 50px;
+	border: 2px solid white;
+	height: 50px;
+	margin: 0 auto;
+	position: relative;
+	width: 50px;
 	
-	.close {
-		color: darken($background-color, 60%);
-		
-		&:hover {
-			color: darken($background-color, 80%);
-		}
+	.alex & {
+		background: url('http://gravatar.com/avatar/4d00c4c07f26954a622ba72328f871e8?s=100') center no-repeat;
 	}
-}
-
-#success-alert .alert {
-	$background-color: #dff0d8;
-	@include alert($background-color, 3px);
-	color: darken($background-color, 60%);
 	
-	.close {
-		color: darken($background-color, 60%);
-		
-		&:hover {
-			color: darken($background-color, 80%);
-		}
+	.zach & {
+		background: url('http://gravatar.com/avatar/84c0d9b7f0f1945fc58910b4a63ed313?s=100') center no-repeat;
 	}
 }
 
-#contact {
-	input[type="text"],
-	input[type="password"],
-	input[type="date"],
-	input[type="datetime"],
-	input[type="datetime-local"],
-	input[type="month"],
-	input[type="week"],
-	input[type="email"],
-	input[type="number"],
-	input[type="search"],
-	input[type="tel"],
-	input[type="time"],
-	input[type="url"],
-	textarea {
-		@include radius(3px);
-		
-		&.error {
-			@include side-radius(top, 3px);
-		}
-		
-		&.error + small.error {
-			@include side-radius(bottom, 3px);
-		}
-		
-		&:focus {
-			@include box-shadow(0 0 3px 2px #75b9f0);
-		}
-	}
-
-	textarea {
-		min-height: 170px;
-		resize: none;
-	}
-	
-	.button {
-		@include background-image(linear-gradient(-90deg, #60c160, #51a351));
-		border-color: #458a45;
-		height: 30px;
-		font-weight: normal;
-		padding: 0;
-		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
-		width: 83px;
-	}
-	
-	#submit-container {
-		text-align: right;
-	}
+.name {
+	margin-top: 15px;
+	margin-left: 15px;
 }
