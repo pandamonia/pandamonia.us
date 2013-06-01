@@ -1,5 +1,9 @@
+// WE WANT NORMALIZE HERE.
+@import "normalize";
+
+// WE WANT HTML CLASSES HERE.
+// $include-html-classes: false;
 @import "settings";
-@import "foundation";
 @import "compass/css3/transform";
 
 body {
