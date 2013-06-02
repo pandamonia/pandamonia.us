@@ -13,7 +13,6 @@ Icon
 
 ### SASS
 *.sass-cache
-css
 
 ### Jekyll
 _site/
