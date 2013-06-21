@@ -153,8 +153,6 @@ $include-html-classes: false;
 
 .journal {
 	h2 {
-		text-transform: uppercase;
-		
 		a {
 			color: #849b64;
 		}
@@ -167,54 +165,9 @@ $include-html-classes: false;
 			color: black;
 		}
 	}
-}
-
-.twitter, .appdotnet {
-	a {
-		color: #849b64;
-	}
 	
-	.followers {
-		text-transform: uppercase;
-			
-		.followers-count {
-			font-size: 36pt;
-			padding-right: 10px;
-		}
-	}
-
-	.title {
-		font-size: 20pt;
-		font-weight: bold;
-		text-align: center;
-		width: 50% !important;
-
-		@media only screen and (max-width: 767px) {
-			width: 100% !important;
-		}
-		
-		a {
-			color: #839a62 !important;
-			padding: 0.5em !important;
-		}
-	}
-	
-	.post {
-		margin-bottom: 20px;
-		
-		.post-content {
-			margin-bottom: 0;
-		}
-		
-		.post-time {
-			color: #859c65;
-		}
-	}
-	
-	.mascot {
-		display: inline-block;
-		margin-right: 10px;
-		vertical-align: baseline;
+	.posts {
+		margin-left: 20px;
 	}
 }
 
@@ -222,14 +175,6 @@ $include-html-classes: false;
 	@include at2x('social/twitter-green', 28px, 23px);
 	height: 23px;
 	width: 28px;
-}
-
-.appdotnet .mascot {
-	@include at2x('social/appdotnet-green', 27px, 23px);
-	height: 23px;
-	width: 27px;
-}
-
-.posts {
-	margin-left: 20px;
+	display: inline-block;
+	vertical-align: middle;
 }

@@ -104,11 +104,15 @@ footer {
 		float: none;
 	}
 	
+	.social-container {
+		max-width: 400px;
+	}
+	
 	.social {
 		@include single-transition(background-color, 0.3s);
 		@include radius(40px);
 		background: no-repeat center center #a1b980;
-		border-radius: 40px;
+		border-radius: 50%;
 		display: block;
 		height: 60px;
 		margin: 0 auto 25px;
@@ -120,41 +124,25 @@ footer {
 			background-color: #839a62;
 		}
 		
-		&.appdotnet {
-			@include at2x('social/appdotnet', 35px, 32px);
-			
-			@media only screen and (max-width: 360px) {
-				background-size: 28px 26px !important;
-			}
-		}
-	
 		&.email {
 			@include at2x('social/email', 35px, 35px);
-			
-			@media only screen and (max-width: 360px) {
-				background-size: 28px 28px !important;
-			}
 		}
 	
 		&.facebook {
 			@include at2x('social/facebook', 17px, 35px);
-						
-			@media only screen and (max-width: 360px) {
-				background-size: 14px 28px !important;
-			}
 		}
 	
 		&.twitter {
 			@include at2x('social/twitter', 43px, 35px);
-						
-			@media only screen and (max-width: 360px) {
-				background-size: 34px 28px !important;
-			}
 		}
 		
 		@media only screen and (min-width: 400px) {
 			height: 80px;
 			width: 80px;
+		}
+		
+		@media only screen and (max-width: 360px) {
+			background-size: auto 28px !important;
 		}
 	}
 	

@@ -4,9 +4,7 @@ title: Home
 group: "navigation"
 weight: 0
 css: index.css
-js:
-- vendor/jquery.timeago.min.js
-- index.js
+ext_js: '//platform.twitter.com/widgets.js'
 ---
 
 	<div class="row hero-container">
@@ -83,36 +81,10 @@ js:
 {% for post in site.posts %}				<li><h3><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date: "%D" }}</small></h3></li>{% endfor %}
 			</ul>
 		</div>
-		<div class="large-6 columns">	
-			<div class="section-container auto" data-section>
-				<section class="section twitter">
-					<p class="title" data-section-title><a href="#twitter"><span class="mascot"></span> Twitter</a></p>
-					<div class="content" data-section-content>
-						<div class="post">
-							<p class="post-content"></p>
-							<p class="post-time"><a href="#"></a></p>
-						</div>
-						
-						<div class="followers">
-							<strong class="followers-count">0</strong>
-							followers
-						</div>
-					</div>
-				</section>
-				<section class="section appdotnet">
-					<p class="title" data-section-title><a href="#appdotnet"><span class="mascot"></span> App.net</a></p>
-					<div class="content" data-section-content>
-						<div class="post">
-							<p class="post-content"></p>
-							<p class="post-time"><a href="#"></a></p>
-						</div>
-						
-						<div class="followers">
-							<strong class="followers-count">0</strong>
-							followers
-						</div>
-					</div>
-				</section>
-			</div>
+		<div class="large-6 columns twitter">
+			<h2><a href="/blog.html"><span class="mascot"></span> Twitter</a></h2>
+
+			<a class="twitter-timeline" href="https://twitter.com/pandamonia" data-widget-id="347436384967069696" data-tweet-limit="1" data-chrome="noheader nofooter noborders noscrollbar transparent">Tweets by @pandamonia.</a>
+			<a href="https://twitter.com/pandamonia" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @pandamonia.</a>
 		</div>
 	</div>
