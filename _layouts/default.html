@@ -16,7 +16,7 @@
 
 	{% stylesheet default %}
 	{% if page.css %}{% for s in page.css %}{{ s | stylesheet }}{% endfor %}{% endif %}
-	{% javascript vendor/custom.modernizr %}
+	{% javascript vendor/custom.modernizr.js %}
 </head>
 <body class="antialiased">
 	<nav class="top-bar row">
@@ -62,10 +62,9 @@
 
 	<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
 	{% javascript app %}
-	{% if page.js %}{% for j in page.css %}{{ j | javascript }}{% endfor %}{% endif %}
-
-{% for script in page.ext_js %}	<script src="{{ script }}"></script>
-{% endfor %}
+	{% if page.js %}{% for j in page.js %}{{ j | javascript }}{% endfor %}{% endif %}
+	{% if page.ext_js %}{% for j in page.ext_js %}	<script src="{{ script }}"></script>
+	{% endfor %}{% endif %}
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
