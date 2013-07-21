@@ -1,3 +1,6 @@
+//= require foundation
+//= require vendor/retina
+
 ;(function ($, window, undefined) {
 	$(function() {
 		$(document).foundation();
