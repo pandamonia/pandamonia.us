@@ -14,18 +14,17 @@
 	<link rel="alternate" type="application/rss+xml" href="feed.articles.xml" title="Pandamonia - Articles" />
 	<link rel="alternate" type="application/rss+xml" href="feed.links.xml" title="Pandamonia - Links" />
 
-	<link rel="stylesheet" href="/css/default.css" />
-{% for stylesheet in page.css %}	<link rel="stylesheet" href="/css/{{ stylesheet }}" />
-{% endfor %}
-	<script src="/js/vendor/custom.modernizr.js"></script>
+	{% stylesheet default %}
+	{% if page.css %}{% for s in page.css %}{{ s | stylesheet }}{% endfor %}{% endif %}
+	{% javascript vendor/custom.modernizr.js %}
 </head>
 <body class="antialiased">
 	<nav class="top-bar row">
 		<ul class="title-area">
 			<li class="name">
 				<h1>
-					<object data="/img/logo/site-logo.svg" type="image/svg+xml" data-img-fallback="/img/logo/site-logo.png">
-						<!--[if lt IE 9]><img src="/img/logo/site-logo.png" /><![endif]-->
+					<object data="{% asset_path logo/site-logo.svg %}" type="image/svg+xml" data-img-fallback="{% asset_path logo/site-logo.png %}">
+						<!--[if lt IE 9]><img src="{% asset_path logo/site-logo.png %}" /><![endif]-->
 					</object>
 					<a href="/">Pandamonia</a>
 				</h1>
@@ -62,12 +61,10 @@
 	</footer>
 
 	<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="/js/foundation.min.js"></script>
-	<script src="/js/vendor/retina.js"></script>
-	<script src="/js/default.js"></script>
-{% for script in page.ext_js %}	<script src="{{ script }}"></script>
-{% endfor %}{% for script in page.js %}	<script src="/js/{{ script }}"></script>
-{% endfor %}
+	{% javascript app %}
+	{% if page.js %}{% for j in page.js %}{{ j | javascript }}{% endfor %}{% endif %}
+	{% if page.ext_js %}{% for j in page.ext_js %}	<script src="{{ script }}"></script>
+	{% endfor %}{% endif %}
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
