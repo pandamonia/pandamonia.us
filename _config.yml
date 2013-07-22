@@ -7,3 +7,4 @@ exclude:
 - Rakefile
 name: Pandamonia
 description: Pandamonia blog
+cache: true
