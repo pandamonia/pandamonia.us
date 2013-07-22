@@ -3,5 +3,6 @@ permalink: /blog/:year/:month/:day/:title.html
 exclude:
 - config.rb
 - feed.category.xml
+- Rakefile
 name: Pandamonia
 description: Pandamonia blog
