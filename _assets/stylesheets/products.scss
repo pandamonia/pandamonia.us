@@ -75,5 +75,13 @@
 			width: 100%;
 			top: 0;
 		}
+
+		&:nth-child(odd) {
+			display: none;
+		}
+
+		@media only screen and (max-width: $small-screen) {
+			display: none;
+		}
 	}
 }
