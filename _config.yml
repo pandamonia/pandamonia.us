@@ -9,3 +9,6 @@ exclude:
 name: Pandamonia
 description: Pandamonia blog
 cache: true
+assets:
+  js_compressor:  uglifier
+  css_compressor: sass
