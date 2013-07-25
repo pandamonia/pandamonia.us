@@ -43,11 +43,19 @@ module Jekyll
       site = context.registers[:site]
       
       src = @img['src']
+      begin
+        @img['src'] = site.asset_path src
+      rescue Jekyll::AssetsPlugin::Environment::AssetNotFound => e
+        @img['src'] = src
+      end
+
       pathname = Pathname.new(src)
       pathname = pathname.sub_ext('@2x' + pathname.extname)
-      large_asset = site.asset_path pathname.to_s
-      @img['src'] = site.asset_path src
-      @img['data-at2x'] = large_asset
+      begin
+        large_asset = site.asset_path pathname.to_s
+        @img['data-at2x'] = large_asset
+      rescue Jekyll::AssetsPlugin::Environment::AssetNotFound => e
+      end
 
       if @img
         "<img #{@img.collect {|k,v| "#{k}=\"#{v}\"" if v}.join(" ")} />"
