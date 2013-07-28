@@ -4,11 +4,8 @@
 @import "compass/css3/transition";
 
 @mixin desaturate {
-	@include filter(grayscale(100%));
-	-webkit-transform: translateZ(0);
-	filter: url('../filters/desaturate.svg#greyscale');
-	filter: gray;
-	-webkit-filter: grayscale(1);
+	@include filter(grayscale(1));
+	@include translateZ(0);
 }
 
 .row:not(:last-of-type) {
