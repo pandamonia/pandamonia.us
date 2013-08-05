@@ -17,3 +17,6 @@ Icon
 ### Jekyll
 _site/
 Gemfile.lock
+
+### Pow
+tmp/
