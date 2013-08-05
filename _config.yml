@@ -2,6 +2,7 @@ url: http://pandamonia.us
 permalink: /blog/:year/:month/:day/:title.html
 exclude:
 - config.rb
+- config.ru
 - feed.category.xml
 - Gemfile
 - Gemfile.lock
