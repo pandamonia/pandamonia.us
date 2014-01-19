@@ -1,7 +1,4 @@
 @import "settings";
-@import "compass/css3/border-radius";
-@import "compass/css3/box-shadow";
-@import "compass/css3/transform";
 
 .hero-container {
 	margin-bottom: 20px;
@@ -13,9 +10,10 @@
 	position: relative;
 
 	& > .row {
-		@include at2x('hero/blockskit', 790px, 400px);
+		@include at2x('hero/blockskit', 'png', auto, auto);
 		@include box-shadow(inset 0 0 50px black);
 		background-position: center;
+		background-size: cover;
 		display: table-cell;
 		text-shadow: 0 0 5px white; // black;
 		vertical-align: middle;
@@ -47,7 +45,7 @@
 		}
 	}
 
-	@media only screen and (max-width: $small-screen) {
+	@media #{$screen} and (max-width:#{lower-bound($large-range)}) {
 		.icon img {
 			float: none;
 		}
@@ -60,7 +58,7 @@
 
 .hero-aside {
 	& > div {
-		@media only screen and (min-width: 768px) {
+		@media #{$large-up} {
 			border-left: 1px solid #b4b4b4;
 			height: 288px;
 			padding-left: 20px;
@@ -97,8 +95,8 @@
 	}
 
 	.icon {
-		@include radius(10px);
 		background: #c4d295;
+		border-radius: rem-calc(10);
 		text-align: center;
 		padding-top: 10px;
 		padding-bottom: 10px;
@@ -164,32 +162,4 @@
 			vertical-align: middle;
 		}
 	}
-}
-
-.journal {
-	h2 {
-		a {
-			color: #849b64;
-		}
-	}
-	
-	h3 {
-		margin-bottom: 0;
-		
-		a {
-			color: black;
-		}
-	}
-	
-	.posts {
-		margin-left: 20px;
-	}
-}
-
-.twitter .mascot {
-	@include at2x('social/twitter-green', 28px, 23px);
-	height: 23px;
-	width: 28px;
-	display: inline-block;
-	vertical-align: middle;
 }

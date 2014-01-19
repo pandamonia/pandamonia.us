@@ -17,7 +17,7 @@ h2 {
 	text-align: center;
 	
 	.badge {
-		@include at2x('badges/mac-app-store-badge', 165px, 41px);
+		@include at2x('badges/mac-app-store-badge', 'png', 165px, 41px);
 		display: block;
 		height: 41px;
 		margin: 0 auto;

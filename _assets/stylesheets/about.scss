@@ -1,8 +1,6 @@
 @import "settings";
-@import "compass/css3/box-shadow";
 
 h3 {
-	text-align: center;
 	font-size: 27px;
 }
 
@@ -22,7 +20,7 @@ h4 {
 	margin-bottom: 50px;
 }
 
-@media #{$small} {
+@media #{$small-only} {
 	.zach {
 		text-align: right;
 	}
@@ -31,8 +29,8 @@ h4 {
 .gravatar {
 	.img {
 		@include box-shadow(0 3px 8px rgba(0, 0, 0, 0.5));
-		@include radius(50%);
 		border: 7px solid white;
+		border-radius: 50%;
 		height: 200px;
 		margin: 0 auto 20px;
 		position: relative;

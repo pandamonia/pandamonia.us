@@ -1,5 +1,4 @@
 @import "settings";
-@import "compass/css3/box-shadow";
 
 table {
 	width: 100%;
@@ -11,8 +10,8 @@ th {
 
 .img {
 	@include box-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
-	@include radius(50%);
 	border: 2px solid white;
+	border-radius: 50%;
 	height: 50px;
 	margin: 0 auto;
 	position: relative;

@@ -1,0 +1,20 @@
+@import "settings";
+
+.apps {
+	margin-top: rem-calc(15);
+}
+
+.apps li {
+	margin-bottom: rem-calc(15);
+	text-align: center;
+
+	img {
+		margin: 0 auto;
+	}
+
+	h2 {
+		margin-top: rem-calc(10);
+		margin-bottom: 0;
+		font-size: rem-calc(22);
+	}
+}

@@ -1,0 +1,204 @@
+@import "ios-app";
+@import "settings";
+@import "foundation";
+@import "compass";
+
+$logo-color: #a1311f;
+
+nav ul li a {
+	color: $logo-color;
+
+	&:hover {
+		color: darken($logo-color, 10%);
+	}
+}
+
+.bokeh {
+	background-image: image_url('apps/lifelink/bokeh-gradient.png');
+	margin-bottom: rem-calc(40);
+
+	.background {
+		background: image_url('apps/lifelink/bokeh.png') top center;
+		height: rem-calc(300);
+	}
+
+	img {
+		box-shadow: 0 2px 8px rgba(#000, 0.15);
+		border-radius: rem-calc(30);
+		margin: rem-calc(65) 0 rem-calc(10);
+	}
+
+	h2 {
+		color: white;
+		font: 500 rem-calc(30) "ratio-display", sans-serif;
+		text-shadow: 0 1px 2px rgba(#000, 0.35);
+	}
+}
+
+$background-height: 803px;
+$background-width: 387px;
+$iphone-height: 568px;
+$iphone-width: 320px;
+$screenshot-left: 34px;
+$screenshot-top: 119px;
+
+.iphone {
+	@include at2x('iphone/5c/pink', 'png', $background-width, $background-height);
+	position: relative;
+	height: $background-height;
+	width: $background-width;
+
+	.orbit-container {
+		height: $iphone-height;
+		left: $screenshot-left;
+		position: absolute;
+		top: $screenshot-top;
+		width: $iphone-width;
+	}
+}
+
+$links-count: 3;
+$orbit-link-width: 42px;
+$orbit-link-height: $orbit-link-width / $iphone-width * $iphone-height;
+$orbit-link-padding: 28px;
+
+.orbit-links {
+	margin: rem-calc(50) auto 0 !important;
+	width: $links-count * ($orbit-link-width + $orbit-link-padding);
+}
+
+[data-orbit-link] {
+	@include thumb(
+		// Box shadow to apply to thumbnail
+		$box-shadow: 0 0 0 1px rgba($logo-color, 0.2),
+		// Box shadow to apply on hover
+		$box-shadow-hover: 0 0 6px 1px rgba($logo-color, 0.5)
+	);
+
+	img {
+		height: $orbit-link-height;
+		width: $orbit-link-width;
+	}
+}
+
+@media #{$small-only} {
+	.iphone {
+		$small-ratio: 0.759375;
+		background-size: #{$small-ratio * $background-width} #{$small-ratio * $background-height};
+		height: $small-ratio * $background-height;
+		margin: 0 auto;
+		width: $small-ratio * $background-width;
+
+		.orbit-container {
+			height: $small-ratio * $iphone-height;
+			left: $small-ratio * $screenshot-left;
+			top: $small-ratio * $screenshot-top;
+			width: $small-ratio * $iphone-width;
+		}
+	}
+
+	.headings {
+		margin-bottom: rem-calc(40);
+
+		div * {
+			text-align: center;
+		}
+	}
+}
+
+$left-column-width: 420px;
+
+@media #{$medium-only} {
+	.column-right h2 small {
+		display: block;
+		margin-left: 0;
+	}
+}
+
+@media #{$medium-up} {
+	.column-left {
+		float: left;
+		width: $left-column-width;
+		padding-left: 20px;
+	}
+	
+	.column-right {
+		float: right;
+		margin-left: -$left-column-width;
+		width: 100%;
+
+		& > div {
+			margin-left: $left-column-width;
+		}
+	}
+
+	.orbit-links ul {
+		margin-right: rem-calc(43 / 2);
+	}
+
+	.headings div {
+		h2, h3 {
+			margin-top: 0;
+		}
+
+		h2 {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media #{$large-up} {
+	.headings > div {
+		* {
+			display: inline;
+		}
+
+		h3 {
+			margin-left: rem-calc(15);
+		}
+	}
+}
+
+.column-right {
+	h2 {
+		font: 500 rem-calc(30) "ratio-display", sans-serif;
+	}
+
+	h3 {
+		color: #7f7f7f;
+		font: 500 rem-calc(20) "ratio-display", sans-serif;
+	}
+
+	p {
+		font: rem-calc(18) "ratio-display", sans-serif;
+		line-height: 1.5;
+	}
+
+	a.download {
+		@include button(rem-calc(10), $radius: rem-calc(5));
+		@include background-image(linear-gradient(top, $logo-color, darken($logo-color, 5%)));
+		box-shadow: 0 1px 1px rgba(#000, 0.2);
+		display: block;
+		font: 500 rem-calc(18) "ratio-display", sans-serif;
+		height: rem-calc(60);
+		margin: 0 auto;
+		width: rem-calc(280);
+
+		.apple {
+			$apple-width: rem-calc(25);
+			$apple-height: rem-calc(29);
+
+			@include at2x('apps/apple-logo', 'png', $apple-width, $apple-height);
+			display: inline-block;
+			height: $apple-height;
+			margin-top: rem-calc(2);
+			margin-right: rem-calc(20);
+			width: $apple-width;
+			vertical-align: rem-calc(-7);
+		}
+	}
+}
+
+.orbit-slide-number, .orbit-timer {
+	display: none !important;
+}

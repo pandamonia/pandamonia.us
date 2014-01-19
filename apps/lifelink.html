@@ -1,0 +1,72 @@
+---
+layout: default
+title: Lifelink
+group: apps
+css: lifelink
+logo_color: a1311f
+screenshots:
+- apps/lifelink/screenshot.png
+- apps/lifelink/screenshot.png
+- apps/lifelink/screenshot.png
+---
+
+	<div class="bokeh">
+		<div class="background">
+			<div class="row">
+				<div class="small-12 columns text-center">
+					{% img apps/lifelink.png 120 120 %}
+					<h2>Lifelink</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="small-12 columns column">
+			<div class="column-right headings">
+				<div>
+					<h2>Lifelink</h2>
+					<h3>The Peer-to-Peer Life Counter</h3>
+				</div>
+			</div>
+
+			<div class="column-left">
+				<div class="row">
+					<div class="iphone">
+						<ul data-orbit data-options="bullets:false; navigation_arrows:false;">
+							{% for screenshot in page.screenshots %}
+								<li data-orbit-slide="screenshot-{{ forloop.index }}">
+									{{ screenshot | img }}
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+
+					<div class="orbit-links">
+						<!-- <div class="row"> -->
+							<ul class="small-block-grid-3">
+								{% for screenshot in page.screenshots %}
+									<li>
+										<a data-orbit-link="screenshot-{{ forloop.index }}">
+											{{ screenshot | img }}
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+						<!-- </div> -->
+					</div>
+				</div>
+			</div>
+
+			<div class="column-right">
+				<div>
+					<p>App Store description or applicable text would go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius, magna in elementum condimentum, dui neque mattis diam, rhoncus dignissim erat orci in ligula. Etiam malesuada congue tellus, id tempor mauris gravida a.</p>
+					<p>Donec ullamcorper tincidunt nibh, nec imperdiet augue consequat vel. Donec eget viverra libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor mollis consequat. Maecenas ut ipsum velit, et faucibus diam. Aliquam consequat porttitor tortor nec metus.</p>
+
+					<a href="https://itunes.apple.com/us/app/lifelink-peer-to-peer-life/id718605548?ls=1&mt=8" class="download"><span class="apple"></span> Available on the App Store</a>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+	</div>

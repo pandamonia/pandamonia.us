@@ -1,0 +1,6 @@
+{
+  "name": "pandamonia.us",
+  "dependencies": {
+    "foundation": "~5.0.2"
+  }
+}

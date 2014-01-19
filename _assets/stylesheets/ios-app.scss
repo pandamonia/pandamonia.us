@@ -1,11 +1,10 @@
 @import "settings";
-@import "compass/css3/box-shadow";
 
 #badge-container {
 	text-align: center;
 	
 	.badge {
-		@include at2x('badges/app-store-badge', 135px, 41px);
+		@include at2x('badges/app-store-badge', 'png', 135px, 41px);
 		display: block;
 		height: 41px;
 		margin: 0 auto;
@@ -20,8 +19,8 @@ img.centered {
 }
 
 #app-icon-container img {
-	@include radius(18px);
 	@include box-shadow(0 4px 8px rgba(0, 0, 0, 0.75));
+	border-radius: rem-calc(18);
 }
 
 #universal, #retina-ready {
