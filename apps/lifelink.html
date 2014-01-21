@@ -5,9 +5,14 @@ group: apps
 css: lifelink
 logo_color: a1311f
 screenshots:
-- apps/lifelink/screenshot.png
-- apps/lifelink/screenshot.png
-- apps/lifelink/screenshot.png
+- img_path: apps/lifelink/screenshot-1.png
+  caption:  "Lifelink is a life counter for Magic: The Gathering"
+- img_path: apps/lifelink/screenshot-2.png
+  caption:  The catch? Any changes on one device…
+- img_path: apps/lifelink/screenshot-3.png
+  caption:  …instantly sync to the others over Wi-Fi or Bluetooth!
+- img_path: apps/lifelink/screenshot-4.png
+  caption:  Good luck!
 ---
 
 	<div class="bokeh">
@@ -26,7 +31,7 @@ screenshots:
 			<div class="column-right headings">
 				<div>
 					<h2>Lifelink</h2>
-					<h3>The Peer-to-Peer Life Counter</h3>
+					<h3>The Peer-to-Peer Life Counter for Magic: The Gathering</h3>
 				</div>
 			</div>
 
@@ -36,32 +41,43 @@ screenshots:
 						<ul data-orbit data-options="bullets:false; navigation_arrows:false;">
 							{% for screenshot in page.screenshots %}
 								<li data-orbit-slide="screenshot-{{ forloop.index }}">
-									{{ screenshot | img }}
+									{{ screenshot.img_path | img }}
+									<div class="orbit-caption">
+										{{ screenshot.caption }}
+									</div>
 								</li>
 							{% endfor %}
 						</ul>
 					</div>
 
 					<div class="orbit-links">
-						<!-- <div class="row"> -->
-							<ul class="small-block-grid-3">
-								{% for screenshot in page.screenshots %}
-									<li>
-										<a data-orbit-link="screenshot-{{ forloop.index }}">
-											{{ screenshot | img }}
-										</a>
-									</li>
-								{% endfor %}
-							</ul>
-						<!-- </div> -->
+						<ul class="small-block-grid-4">
+							{% for screenshot in page.screenshots %}
+								<li>
+									<a data-orbit-link="screenshot-{{ forloop.index }}">
+										{{ screenshot.img_path | img }}
+									</a>
+								</li>
+							{% endfor %}
+						</ul>
 					</div>
 				</div>
 			</div>
 
 			<div class="column-right">
 				<div>
-					<p>App Store description or applicable text would go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius, magna in elementum condimentum, dui neque mattis diam, rhoncus dignissim erat orci in ligula. Etiam malesuada congue tellus, id tempor mauris gravida a.</p>
-					<p>Donec ullamcorper tincidunt nibh, nec imperdiet augue consequat vel. Donec eget viverra libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor mollis consequat. Maecenas ut ipsum velit, et faucibus diam. Aliquam consequat porttitor tortor nec metus.</p>
+					<p>Lifelink is the only life counter app for Magic: The Gathering that lets you connect with nearby players to sync scores; changes for all players instantly appear on your device and theirs.</p> 
+
+					<p class="no-margin">Features:</p>
+					<ul>
+						<li>Take advantage of local and peer-to-peer Wi-Fi as well as Bluetooth to connect nearby players.</li>
+						<li>Free to keep track of two-player games. Unlimited players or planeswalkers available with in-app purchase.</li>
+						<li>Opponent doesn’t have Lifelink? Add a local player to track his/her score.</li>
+						<li>Designed and optimized for iOS 7.</li>
+					</ul>
+
+					<p class="no-margin">A proud Pandamonia product.</p>
+					<p>In collaboration with <a href="http://wylie.su" target="_blank">Wylie Conlon</a>.</p>
 
 					<a href="https://itunes.apple.com/us/app/lifelink-peer-to-peer-life/id718605548?ls=1&mt=8" class="download"><span class="apple"></span> Available on the App Store</a>
 				</div>

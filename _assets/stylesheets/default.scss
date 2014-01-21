@@ -7,7 +7,6 @@ $include-html-global-classes: true;
 @import "foundation";
 
 nav {
-	// text-align: center;
 	padding: rem-calc(17) 0;
 	min-height: rem-calc(80);
 
@@ -16,7 +15,6 @@ nav {
 	}
 
 	h1 {
-		// margin-bottom: rem-calc(15);
 		padding: 0;
 		margin: 0;
 		position: relative;
@@ -55,6 +53,10 @@ nav {
 			display: inline-block;
 			margin: 0 rem-calc(20);
 			font: 500 rem-calc(18) "ratio-display", sans-serif;
+
+			@media #{$small-only} {
+				margin: 0 rem-calc(10);
+			}
 		}
 	}
 }
@@ -63,7 +65,15 @@ footer {
 	border-top: 1px solid darken(white, 10%);
 	color: #7F7F7F;
 	font: rem-calc(14) "ratio-display", sans-serif;
-	margin-top: 20px;
+	margin-top: rem-calc(20);
 	text-align: center;
-	padding-top: 25px;
+	padding: rem-calc(25);
+
+	p {
+		margin-bottom: 0 !important;
+
+		@media #{$medium-up} {
+			display: inline;
+		}
+	}		
 }

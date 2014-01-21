@@ -5,7 +5,7 @@
 
 $logo-color: #a1311f;
 
-nav ul li a {
+nav ul li a, .column-right a {
 	color: $logo-color;
 
 	&:hover {
@@ -57,7 +57,7 @@ $screenshot-top: 119px;
 	}
 }
 
-$links-count: 3;
+$links-count: 4;
 $orbit-link-width: 42px;
 $orbit-link-height: $orbit-link-width / $iphone-width * $iphone-height;
 $orbit-link-padding: 28px;
@@ -172,6 +172,10 @@ $left-column-width: 420px;
 	p {
 		font: rem-calc(18) "ratio-display", sans-serif;
 		line-height: 1.5;
+
+		&:first-of-type {
+			margin-top: rem-calc(20);
+		}
 	}
 
 	a.download {
@@ -201,4 +205,8 @@ $left-column-width: 420px;
 
 .orbit-slide-number, .orbit-timer {
 	display: none !important;
+}
+
+.no-margin {
+	margin-bottom: 0;
 }
