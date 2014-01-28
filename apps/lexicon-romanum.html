@@ -2,22 +2,22 @@
 layout: default
 title: Lexicon Romanum
 group: apps
-css: mac-app.css
+css: mac-app
 ---
 
 	<div class="row">
 		<h2>Lexicon Romanum</h2>
-		
+
 		<div class="laptop">
-			<img src="/img/apps/lexicon-romanum/laptop.png" height="473" width="764" />
+			{% img apps/lexicon-romanum/laptop.png 764 473 Laptop %}
 		</div>
 	</div>
 	<div class="row">&nbsp;</div>
 	<div class="row">
-		<ul data-clearing class="large-block-grid-3 large-8 large-centered columns">
-			<li><a class="th radius" href="/img/apps/lexicon-romanum/agricola.jpg"><img src="/img/apps/lexicon-romanum/agricola.jpg" /></a></li>
-			<li><a class="th radius" href="/img/apps/lexicon-romanum/seventy.jpg"><img src="/img/apps/lexicon-romanum/seventy.jpg" /></a></li>
-			<li><a class="th radius" href="/img/apps/lexicon-romanum/window.jpg"><img src="/img/apps/lexicon-romanum/window.jpg" /></a></li>
+		<ul class="large-block-grid-4 large-8 large-centered columns clearing-thumbs" data-clearing>
+			<li><a class="th radius" href="{% asset_path apps/lexicon-romanum/agricola.jpg %}">{% img apps/lexicon-romanum/agricola-th.jpg %}</a></li>
+			<li><a class="th radius" href="{% asset_path apps/lexicon-romanum/seventy.jpg %}">{% img apps/lexicon-romanum/seventy-th.jpg %}</a></li>
+			<li><a class="th radius" href="{% asset_path apps/lexicon-romanum/window.jpg %}">{% img apps/lexicon-romanum/window-th.jpg %}</a></li>
 		</ul>
 	</div>
 	<div class="row" id="description">

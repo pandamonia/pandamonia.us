@@ -1,0 +1,39 @@
+@import "settings";
+
+h2 {
+	text-align: center;
+}
+
+.laptop {
+	padding: 0 20px;
+	
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+#badge-container {
+	text-align: center;
+	
+	.badge {
+		@include at2x('badges/mac-app-store-badge', 'png', 165px, 41px);
+		display: block;
+		height: 41px;
+		margin: 0 auto;
+		text-indent: -9999em;
+		width: 165px;
+	}
+}
+
+#features {
+	margin-bottom: 0;
+}
+
+#description ul {
+	margin-left: 25px;
+}
+
+a.th {
+	margin-top: 5px;
+}

@@ -1,0 +1,72 @@
+@import "settings";
+
+#badge-container {
+	text-align: center;
+	
+	.badge {
+		@include at2x('badges/app-store-badge', 'png', 135px, 41px);
+		display: block;
+		height: 41px;
+		margin: 0 auto;
+		text-indent: -9999em;
+		width: 135px;
+	}
+}
+
+img.centered {
+	display: block;
+	margin: 0 auto;
+}
+
+#app-icon-container img {
+	@include box-shadow(0 4px 8px rgba(0, 0, 0, 0.75));
+	border-radius: rem-calc(18);
+}
+
+#universal, #retina-ready {
+	table {
+		border: 0;
+		height: 50px;
+		width: 100%;
+	}
+
+	.image {
+		@include side-radius(left, 3px);
+		
+		background-color: #a3a3a3;
+		width: 50px;
+		
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	
+	.text {
+		@include side-radius(right, 3px);
+		
+		background-color: #e4e4e4;
+		padding-left: 15px;
+		color: #454545;
+	}
+}
+
+#app-header {
+	margin-bottom: 20px;
+}
+
+hgroup {
+	text-align: center;
+	
+	h2 {
+		margin-bottom: 0;
+	}
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 18px;
+}

@@ -1,18 +1,15 @@
-### OSX
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
-
-### SASS
+# SASS
 *.sass-cache
 
-### Jekyll
+# Jekyll
 _site/
+Gemfile.lock
+
+# Pow
+tmp/
+
+# Bower
+bower_components/
+
+# Jekyll Assets
+.jekyll-assets-cache/

@@ -1,0 +1,49 @@
+@import "settings";
+
+h3 {
+	font-size: 27px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+#pandaModal, #rileyModal {
+	text-align: center;
+	
+	img {
+		margin: 0 auto;
+	}
+}
+
+.alex {
+	margin-bottom: 50px;
+}
+
+@media #{$small-only} {
+	.zach {
+		text-align: right;
+	}
+}
+
+.gravatar {
+	.img {
+		@include box-shadow(0 3px 8px rgba(0, 0, 0, 0.5));
+		border: 7px solid white;
+		border-radius: 50%;
+		height: 200px;
+		margin: 0 auto 20px;
+		position: relative;
+		width: 200px;
+
+		.alex & {
+			background: url('http://gravatar.com/avatar/4d00c4c07f26954a622ba72328f871e8?s=400') center no-repeat;
+			background-size: 200px;
+		}
+		
+		.zach & {
+			background: url('http://gravatar.com/avatar/84c0d9b7f0f1945fc58910b4a63ed313?s=400') center no-repeat;
+			background-size: 200px;
+		}
+	}
+}
